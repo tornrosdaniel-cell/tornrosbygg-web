@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Byggtips & guider inför ditt projekt | Törnros Bygg",
   description:
-    "Läs praktiska guider om att planera renovering, jämföra byggofferter och förbereda en tillbyggnad. Törnros Bygg delar erfarenheter från byggprojekt.",
+    "Läs guider om badrumspris, renoveringens omfattning, dränering, byggofferter och tillbyggnad. Praktiska råd inför ditt byggprojekt.",
   alternates: { canonical: "/byggtips/" },
 };
 
@@ -26,6 +26,24 @@ const guides = [
     title: "Förbered en tillbyggnad vid ett befintligt hus",
     text: "Tänk igenom användning, anslutningen till huset, marken och vardagen under arbetet.",
     href: "/byggtips/forbereda-tillbyggnad/",
+  },
+  {
+    eyebrow: "Badrum",
+    title: "Vad kostar en badrumsrenovering?",
+    text: "Förstå vilka arbeten och val som påverkar offerten för just ditt badrum.",
+    href: "/byggtips/vad-kostar-badrumsrenovering/",
+  },
+  {
+    eyebrow: "Renovering",
+    title: "Totalrenovering eller delrenovering?",
+    text: "Se när ett avgränsat arbete räcker och när flera rum behöver planeras ihop.",
+    href: "/byggtips/totalrenovering-eller-delrenovering/",
+  },
+  {
+    eyebrow: "Dränering",
+    title: "Vad bör undersökas inför en dränering?",
+    text: "Gå igenom fukttecken, huset, marken och vad som behöver återställas.",
+    href: "/byggtips/infor-dranering/",
   },
 ];
 
