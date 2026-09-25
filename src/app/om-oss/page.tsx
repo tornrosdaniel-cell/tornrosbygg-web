@@ -64,13 +64,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section">
-        <div className="container grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-          <div><p className="eyebrow mb-4">Ett annat initiativ</p><h2 className="heading-lg">Ordning i byggprojektet</h2></div>
-          <div><p className="body-lg">Daniel Törnros står även bakom <a href="https://hantverkshjalpen.nu/" className="font-bold text-[var(--color-accent-dark)] underline underline-offset-4">Hantverkshjälpen.nu</a>, en separat plattform för kommunikation och dokumentation i byggprojekt. Den erfarenheten ligger nära vårt synsätt: tydliga underlag och beslut hjälper alla som arbetar tillsammans. Plattformen är fristående från Törnros Byggs tjänster.</p></div>
-        </div>
-      </section>
-
       <section className="section"><div className="container"><div className="surface grid gap-8 p-8 md:p-12 lg:grid-cols-[1fr_auto] lg:items-center"><div><h2 className="heading-lg">Har du ett projekt i åtanke?</h2><p className="body-lg mt-5">Berätta vad du vill göra, så pratar vi om nästa steg.</p></div><Link href="/kontakt" className="button button-primary">Kontakta oss</Link></div></div></section>
     </main>
   );

@@ -86,7 +86,7 @@ export default function ByggtipsPage() {
           <div><p className="eyebrow mb-4">Projektets ordning</p><h2 className="heading-lg">Samla besluten på ett ställe</h2></div>
           <div>
             <p className="body-lg">Ritningar, offert, val och ändringar blir lättare att följa när de dokumenteras under projektets gång. Vi förespråkar tydlig kommunikation mellan beställare och utförare.</p>
-            <p className="body-copy mt-6">Daniel Törnros, som driver Törnros Bygg, står även bakom den separata plattformen <a href="https://hantverkshjalpen.nu/" className="font-bold text-[var(--color-accent-dark)] underline underline-offset-4">Hantverkshjälpen.nu</a>. Den kan användas för att samla kommunikation och dokumentation i byggprojekt. Den är ett valfritt hjälpmedel; du kan använda guiderna här oavsett vilket verktyg du väljer.</p>
+            <p className="body-copy mt-6">Vår <Link href="/byggtips/dokumentera-byggprojekt/" className="font-bold text-[var(--color-accent-dark)] underline underline-offset-4">guide till projektdokumentation</Link> visar vad som är bra att samla före, under och efter byggarbetet.</p>
           </div>
         </div>
       </section>
