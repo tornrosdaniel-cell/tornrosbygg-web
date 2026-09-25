@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Byggföretag i Solna & Stockholm | Törnros Bygg",
   description:
     "Törnros Bygg utför renovering, tillbyggnad, nybyggnation och markarbeten för privatpersoner, BRF:er och fastighetsägare i Solna och Stockholmsområdet.",
+  alternates: { canonical: "/" },
 };
 
 const services = [
@@ -36,7 +37,7 @@ const services = [
   },
   {
     title: "Markarbeten & dränering",
-    href: "/tjanster/markarbeten-dranering",
+    href: "/tjanster/markarbeten",
     text: "Schakt, dränering, ledningar och markytor runt fastigheter.",
   },
 ];
