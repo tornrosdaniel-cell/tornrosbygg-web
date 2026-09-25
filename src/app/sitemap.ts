@@ -24,6 +24,10 @@ const routes = [
   "/projekt/renovering-namndemansgatan-solna/",
   "/projekt/tillbyggnad-sjovagen-solna/",
   "/projekt/nybyggnation-blanchevagen-danderyd/",
+  "/projekt/badrum-frejgatan-stockholm/",
+  "/projekt/attefallshus-sjovagen-solna/",
+  "/projekt/poolbygge-sjovagen-solna/",
+  "/projekt/servisbyte-dranering-solna/",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

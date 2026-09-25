@@ -7,6 +7,7 @@ export type Project = {
   category: string;
   intro: string;
   details: string;
+  highlights?: string[];
   image: string;
   imageAlt: string;
   width: number;
@@ -31,7 +32,7 @@ export function ProjectDetail({ project }: { project: Project }) {
       <section className="section border-y border-[var(--color-border)] bg-[var(--color-surface)]">
         <div className="container grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
           <div><p className="eyebrow mb-4">Projektet</p><h2 className="heading-lg">Arbetet på {project.location.split(",")[0]}</h2></div>
-          <div><p className="body-lg">{project.details}</p><Link href={project.service.href} className="button button-secondary mt-8">{project.service.label}</Link></div>
+          <div><p className="body-lg">{project.details}</p>{project.highlights && <><h3 className="heading-md mt-8">Det här ingick i uppdraget</h3><ul className="mt-5 list-disc space-y-2 pl-6 body-copy">{project.highlights.map((item) => <li key={item}>{item}</li>)}</ul></>}<Link href={project.service.href} className="button button-secondary mt-8">{project.service.label}</Link></div>
         </div>
       </section>
       {project.secondaryImage && <section className="section"><div className="container"><div className="max-w-3xl"><p className="eyebrow mb-4">Från projektet</p><h2 className="heading-lg">Fler detaljer</h2></div><Image src={project.secondaryImage.src} alt={project.secondaryImage.alt} width={project.secondaryImage.width} height={project.secondaryImage.height} sizes="(max-width: 768px) 100vw, 768px" className="mt-10 h-auto w-full max-w-3xl rounded-[var(--radius-md)] object-cover" /></div></section>}

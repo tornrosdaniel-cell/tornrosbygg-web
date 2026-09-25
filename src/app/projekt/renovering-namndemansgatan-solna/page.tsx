@@ -3,7 +3,7 @@ import { ProjectDetail, type Project } from "@/components/project-detail";
 
 export const metadata: Metadata = {
   title: "Renovering på Nämndemansgatan, Solna | Törnros Bygg",
-  description: "Se bilder från en renovering om cirka 140 kvm på Nämndemansgatan i Solna.",
+  description: "Renovering av cirka 140 kvm på Nämndemansgatan i Solna med nya golv, två badrum, kök och tvättstuga.",
   alternates: { canonical: "/projekt/renovering-namndemansgatan-solna/" },
 };
 
@@ -11,8 +11,9 @@ const project: Project = {
   title: "Renovering på Nämndemansgatan",
   location: "Nämndemansgatan, Solna",
   category: "Renovering",
-  intro: "Ett renoveringsprojekt om cirka 140 kvm med flera rum, badrum, kök, tvättstuga och nya ytskikt.",
-  details: "Renoveringen omfattade flera delar av bostaden. När rum och funktioner förändras i samma projekt behöver val av ytskikt, arbete i kök och badrum samt ordningen mellan olika moment hänga ihop. Bilderna visar färdiga miljöer från arbetet på Nämndemansgatan.",
+  intro: "En lägenhet om cirka 140 kvm på Nämndemansgatan i Solna renoverades med nya golv, två badrum, kök och tvättstuga.",
+  details: "Bostaden revs ut inför renoveringen. Arbetet omfattade både nya funktioner och ytskikt i flera rum. Bilderna visar färdiga miljöer från projektet.",
+  highlights: ["Nya golv med ljudisolering i hela bostaden", "Två nya badrum samt nytt kök och tvättstuga", "Trappa till övre plan", "Nya ytskikt i två vardagsrum och tre sovrum"],
   image: "/images/projects/namndemansgatan/renovering-vardagsrum-solna.jpeg",
   imageAlt: "Färdigt vardagsrum efter renovering på Nämndemansgatan i Solna",
   width: 2048, height: 1536,
