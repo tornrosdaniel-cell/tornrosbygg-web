@@ -87,7 +87,7 @@ export default function BathroomRenovationPage() {
       <section className="container grid items-center gap-12 py-16 lg:grid-cols-2 lg:py-24">
         <div>
           <p className="eyebrow mb-6">Badrumsrenovering</p>
-          <h1 className="text-[clamp(2.5rem,4vw,4.25rem)] font-bold leading-[1.02] [overflow-wrap:anywhere]">
+          <h1 className="text-[clamp(1.85rem,3.2vw,3.5rem)] font-bold leading-[1.08]">
             Badrumsrenovering i Solna & Stockholm
           </h1>
           <p className="body-lg mt-8">
