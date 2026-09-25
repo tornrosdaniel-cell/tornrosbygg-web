@@ -56,5 +56,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
+    ...[
+      "/kontakt",
+      "/om-oss",
+      "/fastighetsagare",
+      "/byggtips",
+      "/projekt",
+      "/projekt/renovering-namndemansgatan-solna",
+      "/projekt/tillbyggnad-sjovagen-solna",
+      "/projekt/nybyggnation-blanchevagen-danderyd",
+    ].map((path) => ({
+      url: `https://tornrosbygg.se${path}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
   ];
 }
