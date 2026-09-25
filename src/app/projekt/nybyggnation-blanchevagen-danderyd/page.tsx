@@ -3,7 +3,7 @@ import { ProjectDetail, type Project } from "@/components/project-detail";
 
 export const metadata: Metadata = {
   title: "Nybyggnation på Blanchevägen, Danderyd | Törnros Bygg",
-  description: "Se färdiga miljöer från ett nybyggnationsprojekt på Blanchevägen i Danderyd.",
+  description: "Nybyggnation på Blanchevägen i Danderyd: ett hus om cirka 390 kvm i tre plan, med markarbete, pool och terrass.",
   alternates: { canonical: "/projekt/nybyggnation-blanchevagen-danderyd/" },
 };
 
@@ -11,8 +11,9 @@ const project: Project = {
   title: "Nybyggnation på Blanchevägen",
   location: "Blanchevägen, Danderyd",
   category: "Nybyggnation",
-  intro: "Ett nybyggnationsprojekt i Danderyd. Bilderna visar ett ljust allrum och ett färdigt badrum.",
-  details: "Projektet på Blanchevägen omfattade arbete med ett nytt hus. De färdiga rummen visar två olika delar av helheten: ett öppet allrum och ett badrum. Vid nybyggnation behöver planering och utförande av byggnadens olika delar samspela från början.",
+  intro: "På Blanchevägen i Danderyd omfattade uppdraget ett nytt hus om cirka 390 kvm i tre plan, från förberedelse av tomten till bostad och utemiljö.",
+  details: "Det tidigare huset revs och marken åtgärdades med hänsyn till den tidigare användningen. Inför grunden utfördes schaktning och bergsprängning. Bilderna visar färdiga invändiga miljöer från det nya huset.",
+  highlights: ["Rivning av det tidigare huset och åtgärder i marken", "Schaktning och bergsprängning inför grunden", "Nytt hus om cirka 390 kvm i tre plan", "Pool och terrass i utemiljön"],
   image: "/images/projects/blanchevagen/nybyggnation-allrum-danderyd.jpeg",
   imageAlt: "Ljust allrum i nybyggnation på Blanchevägen i Danderyd",
   width: 964, height: 723,
