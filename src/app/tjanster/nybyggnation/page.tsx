@@ -183,7 +183,7 @@ export default function NewConstructionPage() {
         <div className="container grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <p className="eyebrow mb-4">Blanchevägen i Danderyd</p>
-            <h2 className="heading-lg">Ett färdigt rum från ett verkligt projekt</h2>
+            <h2 className="heading-lg">Ett ljust allrum</h2>
           </div>
           <div>
             <p className="body-lg">
