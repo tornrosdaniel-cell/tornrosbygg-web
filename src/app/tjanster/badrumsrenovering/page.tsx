@@ -87,7 +87,9 @@ export default function BathroomRenovationPage() {
       <section className="container grid items-center gap-12 py-16 lg:grid-cols-2 lg:py-24">
         <div>
           <p className="eyebrow mb-6">Badrumsrenovering</p>
-          <h1 className="heading-xl">Badrumsrenovering i Solna & Stockholm</h1>
+          <h1 className="text-[clamp(2.5rem,4vw,4.25rem)] font-bold leading-[1.02] [overflow-wrap:anywhere]">
+            Badrumsrenovering i Solna & Stockholm
+          </h1>
           <p className="body-lg mt-8">
             Ett badrum ska fungera i vardagen och byggas utifrån rummets
             förutsättningar. Törnros Bygg hjälper dig att planera och genomföra
@@ -172,7 +174,7 @@ export default function BathroomRenovationPage() {
       <section className="section bg-[var(--color-ink)] text-[var(--color-surface)]">
         <div className="container">
           <div className="max-w-3xl">
-            <p className="eyebrow mb-4 text-[var(--color-accent-soft)]">Arbetsgång</p>
+            <p className="eyebrow mb-4 !text-[var(--color-accent-soft)]">Arbetsgång</p>
             <h2 className="heading-lg">Från första genomgång till färdigt badrum</h2>
             <p className="mt-6 max-w-2xl leading-8 text-stone-300">
               Olika moment behöver samordnas i rätt ordning. Tidplanen går att
