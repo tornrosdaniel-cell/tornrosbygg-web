@@ -243,6 +243,7 @@ export default function BathroomRenovationPage() {
               </details>
             ))}
           </div>
+          <p className="body-copy mt-8">Vill du förstå vad som påverkar offerten? Läs guiden <Link href="/byggtips/vad-kostar-badrumsrenovering/" className="font-bold text-[var(--color-accent-dark)] underline underline-offset-4">Vad kostar en badrumsrenovering?</Link></p>
         </div>
       </section>
 
