@@ -9,6 +9,10 @@ const nextConfig: NextConfig = {
       { source: "/projekt-renovering-n%C3%A4mndemansgatan-solna", destination: "/projekt/renovering-namndemansgatan-solna", permanent: true },
       { source: "/projekt-tillbyggnad-solna", destination: "/projekt/tillbyggnad-sjovagen-solna", permanent: true },
       { source: "/projekt-nybyggnation-blanchev%C3%A4gen-danderyd", destination: "/projekt/nybyggnation-blanchevagen-danderyd", permanent: true },
+      { source: "/projekt-badrum-frejgatan-stockholm", destination: "/projekt/badrum-frejgatan-stockholm", permanent: true },
+      { source: "/projekt-attefallare-solna", destination: "/projekt/attefallshus-sjovagen-solna", permanent: true },
+      { source: "/projekt-poolbygge-sj%C3%B6v%C3%A4gen-solna", destination: "/projekt/poolbygge-sjovagen-solna", permanent: true },
+      { source: "/projekt-servisbyte-och-dr%C3%A4nering", destination: "/projekt/servisbyte-dranering-solna", permanent: true },
     ];
   },
   turbopack: {
