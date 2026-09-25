@@ -36,6 +36,16 @@ export default function AboutPage() {
 
       <section className="section border-y border-[var(--color-border)] bg-[var(--color-surface)]">
         <div className="container grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+          <div><p className="eyebrow mb-4">Vår bakgrund</p><h2 className="heading-lg">Ett far-och-son-företag som växte med uppdragen</h2></div>
+          <div>
+            <p className="body-lg">Rötterna finns i Törnros Fastigheter AB, som grundades 2015 som ett far-och-son-företag. När den äldre Törnros lämnade sitt yrkesliv som byggingenjör och entreprenör fortsatte han med byggprojektledning och kontrolluppdrag.</p>
+            <p className="body-copy mt-6">Verksamheten växte efter hand från dessa uppdrag till att även omfatta genomförandet av byggprojekt. I dag arbetar Daniel Törnros vidare med den praktiska bredden under varumärket Törnros Bygg, från renovering av befintliga miljöer till tillbyggnad, nybyggnation och markarbeten.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div><p className="eyebrow mb-4">Det vi bygger</p><h2 className="heading-lg">Verkliga projekt, olika förutsättningar</h2></div>
           <div>
             <p className="body-lg">På Nämndemansgatan i Solna finns en renovering om cirka 140 kvm med flera rum, kök och badrum. På Sjövägen i Solna har vi arbetat med en tillbyggnad med nya ytor, terrass och garage. På Blanchevägen i Danderyd finns ett nybyggnationsprojekt.</p>
@@ -45,7 +55,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section border-y border-[var(--color-border)] bg-[var(--color-surface)]">
         <div className="container">
           <div className="max-w-3xl"><p className="eyebrow mb-4">Arbetssätt</p><h2 className="heading-lg">Börja med att förstå helheten</h2><p className="body-lg mt-6">Vad som ska byggas är bara en del av bilden. Befintliga förhållanden, praktisk åtkomst och hur arbetet påverkar dem som använder fastigheten spelar också roll.</p></div>
           <div className="mt-12 grid gap-px overflow-hidden rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-border)] md:grid-cols-3">
@@ -54,7 +64,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section border-y border-[var(--color-border)] bg-[var(--color-surface)]">
+      <section className="section">
         <div className="container grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div><p className="eyebrow mb-4">Ett annat initiativ</p><h2 className="heading-lg">Ordning i byggprojektet</h2></div>
           <div><p className="body-lg">Daniel Törnros står även bakom <a href="https://hantverkshjalpen.nu/" className="font-bold text-[var(--color-accent-dark)] underline underline-offset-4">Hantverkshjälpen.nu</a>, en separat plattform för kommunikation och dokumentation i byggprojekt. Den erfarenheten ligger nära vårt synsätt: tydliga underlag och beslut hjälper alla som arbetar tillsammans. Plattformen är fristående från Törnros Byggs tjänster.</p></div>
