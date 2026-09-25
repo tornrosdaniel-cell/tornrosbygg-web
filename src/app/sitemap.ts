@@ -20,6 +20,8 @@ const routes = [
   "/byggtips/vad-kostar-badrumsrenovering/",
   "/byggtips/totalrenovering-eller-delrenovering/",
   "/byggtips/infor-dranering/",
+  "/byggtips/andringar-tillaggsarbeten-renovering/",
+  "/byggtips/dokumentera-byggprojekt/",
   "/projekt/",
   "/projekt/renovering-namndemansgatan-solna/",
   "/projekt/tillbyggnad-sjovagen-solna/",
