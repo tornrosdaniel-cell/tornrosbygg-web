@@ -28,6 +28,7 @@ const routes = [
   "/projekt/attefallshus-sjovagen-solna/",
   "/projekt/poolbygge-sjovagen-solna/",
   "/projekt/servisbyte-dranering-solna/",
+  "/projekt/nybyggnation-munkholmen-sigtuna/",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
