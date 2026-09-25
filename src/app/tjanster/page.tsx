@@ -67,9 +67,9 @@ export default function ServicesPage() {
 
       <section className="border-y border-[var(--color-border)] bg-[var(--color-surface)] py-16 md:py-24">
         <div className="container">
-          <div className="grid gap-px overflow-hidden rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-border)] md:grid-cols-2 lg:grid-cols-3">
-            {services.map((service) => (
-              <article key={service.href} className="bg-[var(--color-surface)] p-7">
+          <div className="grid gap-px overflow-hidden rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-border)] md:grid-cols-2 lg:grid-cols-12">
+            {services.map((service, index) => (
+              <article key={service.href} className={`bg-[var(--color-surface)] p-7 ${index < 3 ? "lg:col-span-4" : "lg:col-span-3"} ${index === services.length - 1 ? "md:col-span-2 lg:col-span-3" : ""}`}>
                 <h2 className="heading-md">{service.title}</h2>
                 <p className="body-copy mt-4">{service.text}</p>
                 <Link
