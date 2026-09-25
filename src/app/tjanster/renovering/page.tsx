@@ -283,6 +283,7 @@ export default function RenovationPage() {
               </details>
             ))}
           </div>
+          <p className="body-copy mt-8">Osäker på omfattningen? Läs guiden <Link href="/byggtips/totalrenovering-eller-delrenovering/" className="font-bold text-[var(--color-accent-dark)] underline underline-offset-4">Totalrenovering eller delrenovering?</Link></p>
         </div>
       </section>
 
