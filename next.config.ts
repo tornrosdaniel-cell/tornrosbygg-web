@@ -13,7 +13,6 @@ const nextConfig: NextConfig = {
       { source: "/projekt-attefallare-solna", destination: "/projekt/attefallshus-sjovagen-solna", permanent: true },
       { source: "/projekt-poolbygge-sj%C3%B6v%C3%A4gen-solna", destination: "/projekt/poolbygge-sjovagen-solna", permanent: true },
       { source: "/projekt-servisbyte-och-dr%C3%A4nering", destination: "/projekt/servisbyte-dranering-solna", permanent: true },
-      { source: "/projekt-nybyggnation-munkholmen", destination: "/projekt/nybyggnation-munkholmen-sigtuna", permanent: true },
     ];
   },
   turbopack: {
