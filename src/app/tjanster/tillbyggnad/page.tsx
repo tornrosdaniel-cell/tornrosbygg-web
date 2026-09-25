@@ -187,9 +187,9 @@ export default function ExtensionPage() {
           </div>
           <div>
             <p className="body-lg">
-              Bilden ovan visar en tillbyggnad på Sjövägen i Solna med nya
+              På Sjövägen i Solna har vi arbetat med en tillbyggnad med nya
               ytor och terrass i anslutning till huset. Projektet ger ett
-              konkret exempel på hur ny boyta kan bli en del av ett befintligt hem.
+              konkret exempel på hur ny yta kan samspela med ett befintligt hus.
             </p>
             <p className="body-copy mt-6">
               Din tillbyggnad får sina egna förutsättningar. Vi går gärna igenom
