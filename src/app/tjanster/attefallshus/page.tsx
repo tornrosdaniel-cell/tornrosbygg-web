@@ -112,7 +112,7 @@ export default function AttefallshusPage() {
             </Link>
           </div>
         </div>
-        <aside className="surface flex min-h-[28rem] flex-col justify-between bg-[var(--color-ink)] p-8 text-[var(--color-surface)] md:p-12">
+        <aside className="flex min-h-[28rem] flex-col justify-between rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-ink)] p-8 text-[var(--color-surface)] md:p-12">
           <p className="eyebrow !text-[var(--color-accent-soft)]">Från idé till användbar yta</p>
           <div>
             <p className="text-[clamp(2rem,3.5vw,3.5rem)] font-bold leading-[1.1]">
