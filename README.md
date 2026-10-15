@@ -122,16 +122,20 @@ Gör sådana tester med syntetiska uppgifter och undvik att logga credentials.
 
 ## Integritet: återstår före lansering
 
-`/integritet` behåller **Törnros Fastigheter AB** som personuppgiftsansvarig och
-**hej@tornrosbygg.se** som kontakt. Inga juridiska uppgifter har antagits.
-Följande ska verifieras av verksamhetsansvarig och därefter införas i texten:
+`/integritet` anger ägarens bekräftade uppgifter: **Törnros Fastigheter AB**,
+**559044-0805**, **Sjövägen 14, 169 55 Solna** och **hej@tornrosbygg.se**.
+Varumärket är Törnros Bygg. Policyn beskriver formulärets faktiska dataflöde,
+leverantörerna, IP-baserat spamskydd och den beslutade gallringsrutinen.
+Kundförfrågningar som inte leder till uppdrag raderas normalt manuellt i Loopias
+e-post efter 12 månader från senaste relevanta kontakt, om inget annat berättigat
+behov finns. Uppdragsrelaterade förfrågningar blir projektkorrespondens och sparas
+enligt tillämpliga rättsliga krav och dokumenterade behov. Ingen automatisk
+gallringsfunktion byggs. Leverantörernas lagringstider och backupgallring har inte antagits.
 
-- Organisationsnummer och fullständig postadress för personuppgiftsansvarig.
-- Faktisk gallringsrutin för förfrågningar och e-post, även hos leverantörer.
-- Slutliga leverantörer och biträdesavtal: Vercel, Resend, Upstash och e-postleverantör.
-- Valda databasregioner, underbiträden, möjliga tredjelandsöverföringar och
-  tillämpliga skyddsåtgärder. Utgå från aktuella avtal och kontoinställningar.
-- Hur säkerhetsbehandlingen av IP-digester med upp till en timmes Redis-TTL ska
-  beskrivas och om leverantörsloggar har andra lagringstider.
-
-Sidans befintliga platshållare är ännu inte färdiga för publik lansering.
+Ägaren har bekräftat Loopia AB som leverantör för mottagning och lagring av
+inkommande e-post. Den manuella rutinen finns i dokumentationen nedan; dess
+praktiska verkställande, tillämpliga biträdesavtal, regioner, underbiträden och
+överföringsstöd måste fortfarande verifieras inför lansering.
+Källor, avgränsningar och ansvarigas återstående beslut finns i
+[docs/privacy-review.md](docs/privacy-review.md). Den publika policyn innehåller
+inga interna arbetsanteckningar; det är inte ett klartecken för juridisk lansering.
