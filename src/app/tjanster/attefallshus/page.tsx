@@ -91,10 +91,10 @@ const faqs = [
 export default function AttefallshusPage() {
   return (
     <main>
-      <section className="container grid items-center gap-12 py-16 lg:grid-cols-2 lg:py-24">
+      <section className="container service-hero">
         <div>
           <p className="eyebrow mb-6">Attefallshus & komplementbyggnader</p>
-          <h1 className="text-[clamp(2.2rem,4vw,4.25rem)] font-bold leading-[1.08]">
+          <h1 className="heading-service">
             Attefallshus i Solna & Stockholm
           </h1>
           <p className="body-lg mt-8">
@@ -112,7 +112,7 @@ export default function AttefallshusPage() {
             </Link>
           </div>
         </div>
-        <aside className="flex min-h-[28rem] flex-col justify-between rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-ink)] p-8 text-[var(--color-surface)] md:p-12">
+        <aside className="flex min-h-72 lg:min-h-96 flex-col justify-between rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-ink)] p-8 text-[var(--color-surface)] md:p-12">
           <p className="eyebrow !text-[var(--color-accent-soft)]">Från idé till användbar yta</p>
           <div>
             <p className="text-[clamp(2rem,3.5vw,3.5rem)] font-bold leading-[1.1]">

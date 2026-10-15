@@ -51,7 +51,7 @@ const services = [
 export default function ServicesPage() {
   return (
     <main>
-      <section className="container py-16 md:py-24">
+      <section className="container page-intro">
         <div className="max-w-4xl">
           <p className="eyebrow mb-6">Tjänster</p>
           <h1 className="heading-xl">Byggtjänster i Solna & Stockholm</h1>

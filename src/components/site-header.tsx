@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { MobileNavigation } from "@/components/mobile-navigation";
 
 const navigation = [
   { label: "Tjänster", href: "/tjanster" },
@@ -15,13 +16,13 @@ export function SiteHeader() {
       <div className="container flex min-h-20 items-center justify-between gap-6">
         <Link
           href="/"
-          className="text-xl font-bold tracking-[0.01em] text-[var(--color-ink)]"
+          className="whitespace-nowrap text-xl font-bold tracking-[0.01em] text-[var(--color-ink)]"
           aria-label="Törnros Bygg startsida"
         >
           Törnros Bygg
         </Link>
 
-        <nav className="hidden items-center gap-7 text-sm font-semibold text-[var(--color-muted)] lg:flex">
+        <nav aria-label="Huvudnavigering" className="hidden items-center gap-7 text-sm font-semibold text-[var(--color-muted)] xl:flex">
           {navigation.map((item) => (
             <Link
               key={item.href}
@@ -35,30 +36,12 @@ export function SiteHeader() {
 
         <Link
           href="/kontakt"
-          className="button button-primary hidden whitespace-nowrap lg:inline-flex"
+          className="button button-primary hidden whitespace-nowrap xl:inline-flex"
         >
           Berätta om ditt projekt
         </Link>
 
-        <details className="relative lg:hidden">
-          <summary className="button button-secondary min-w-24">Meny</summary>
-          <div className="absolute right-0 top-[calc(100%+0.75rem)] w-[min(19rem,calc(100vw-2rem))] rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-surface)] p-3 shadow-[0_16px_50px_rgba(27,26,23,0.14)]">
-            <nav className="flex flex-col" aria-label="Mobil navigering">
-              {navigation.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="border-b border-[var(--color-border)] px-3 py-3 text-base font-semibold last:border-b-0"
-                >
-                  {item.label}
-                </Link>
-              ))}
-              <Link href="/kontakt" className="button button-primary mt-3">
-                Berätta om ditt projekt
-              </Link>
-            </nav>
-          </div>
-        </details>
+        <MobileNavigation items={navigation} />
       </div>
     </header>
   );

@@ -93,22 +93,21 @@ const testimonials = [
 export default function Home() {
   return (
     <main>
-      <section className="container grid min-h-[calc(100vh-5rem)] items-center gap-12 py-16 lg:grid-cols-2 lg:py-20">
+      <section className="container home-hero">
         <div>
           <p className="eyebrow mb-6">Bygg & entreprenad · Solna / Stockholm</p>
           <h1 className="heading-xl max-w-4xl">
             Byggföretag i Solna & Stockholm
           </h1>
-          <p className="mt-7 text-2xl font-semibold text-[var(--color-accent-dark)] sm:text-3xl">
-            Från renovering till färdig entreprenad
+          <p className="mt-6 max-w-xl text-xl font-semibold leading-snug text-[var(--color-accent-dark)] sm:text-2xl">
+            Från mindre renovering till större entreprenad
           </p>
           <p className="body-lg mt-7 max-w-2xl">
-            Törnros Bygg hjälper privatpersoner, bostadsrättsföreningar och
-            fastighetsägare med byggprojekt i Solna och Stockholmsområdet –
-            från renoveringar och tillbyggnader till markarbeten och större
-            entreprenader.
+            Vi hjälper privatpersoner, bostadsrättsföreningar och fastighetsägare
+            i Solna och Stockholm med allt från enskilda rum till renovering,
+            tillbyggnad, nybyggnation och markarbeten.
           </p>
-          <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-8 flex flex-col flex-wrap gap-3 sm:flex-row">
             <Link href="/kontakt" className="button button-primary">
               Berätta om ditt projekt
             </Link>
@@ -119,14 +118,14 @@ export default function Home() {
         </div>
 
         <figure className="surface overflow-hidden">
-          <div className="relative aspect-[4/5] sm:aspect-[5/4] lg:aspect-[4/5]">
+          <div className="hero-image">
             <Image
               src="/images/projects/blanchevagen/nybyggnation-mikrocementbadrum-danderyd.jpeg"
               alt="Färdigt badrum i nybyggnation på Blanchevägen i Danderyd"
               fill
               priority
-              quality={85}
-              sizes="(min-width: 1024px) 50vw, 100vw"
+              quality={75}
+              sizes="(min-width: 1244px) 566px, (min-width: 1024px) calc((100vw - 112px) / 2), (min-width: 768px) calc(100vw - 64px), calc(100vw - 32px)"
               className="object-cover"
             />
           </div>
@@ -176,8 +175,8 @@ export default function Home() {
                     src={project.image.src}
                     alt={project.image.alt}
                     fill
-                    quality={80}
-                    sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                    quality={75}
+                    sizes="(min-width: 1244px) 377px, (min-width: 1024px) calc((100vw - 112px) / 3), (min-width: 768px) calc(100vw - 64px), calc(100vw - 32px)"
                     className="object-cover"
                   />
                 </div>

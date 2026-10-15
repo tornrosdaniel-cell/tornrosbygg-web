@@ -93,10 +93,10 @@ const faqs = [
 export default function RenovationPage() {
   return (
     <main>
-      <section className="container grid items-center gap-12 py-16 lg:grid-cols-2 lg:py-24">
+      <section className="container service-hero">
         <div>
           <p className="eyebrow mb-6">Renovering</p>
-          <h1 className="heading-xl">Renovering i Solna & Stockholm</h1>
+          <h1 className="heading-service">Renovering i Solna & Stockholm</h1>
           <p className="body-lg mt-8">
             Törnros Bygg utför renoveringsprojekt i Solna och
             Stockholmsområdet, från enskilda rum och ytor till större
@@ -121,8 +121,8 @@ export default function RenovationPage() {
               alt="Färdigt vardagsrum efter renovering på Nämndemansgatan i Solna"
               fill
               priority
-              quality={85}
-              sizes="(min-width: 1024px) 50vw, 100vw"
+              quality={75}
+              sizes="(min-width: 1244px) 566px, (min-width: 1024px) calc((100vw - 112px) / 2), (min-width: 768px) calc(100vw - 64px), calc(100vw - 32px)"
               className="object-cover"
             />
           </div>
@@ -188,11 +188,11 @@ export default function RenovationPage() {
           <article className="overflow-hidden rounded-[var(--radius-md)] border border-white/15 bg-white/5">
             <div className="relative aspect-[4/3]">
               <Image
-                src="/images/projects/namndemansgatan/renovering-vardagsrum-solna.jpeg"
-                alt="Renoverad interiör på Nämndemansgatan i Solna"
+                src="/images/projects/namndemansgatan/renovering-efter-solna.jpeg"
+                alt="Badrum under slutmontering i renoveringen på Nämndemansgatan i Solna"
                 fill
-                quality={80}
-                sizes="(min-width: 1024px) 50vw, 100vw"
+                quality={75}
+                sizes="(min-width: 1244px) 566px, (min-width: 1024px) calc((100vw - 112px) / 2), (min-width: 768px) calc(100vw - 64px), calc(100vw - 32px)"
                 className="object-cover"
               />
             </div>

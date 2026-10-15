@@ -26,7 +26,7 @@ const principles = [
 export default function AboutPage() {
   return (
     <main>
-      <section className="container py-16 md:py-24">
+      <section className="container page-intro">
         <div className="max-w-4xl">
           <p className="eyebrow mb-6">Om oss</p>
           <h1 className="heading-xl">Människorna bakom Törnros Bygg</h1>

@@ -62,7 +62,7 @@ const guides = [
 export default function ByggtipsPage() {
   return (
     <main>
-      <section className="container py-16 md:py-24">
+      <section className="container page-intro">
         <div className="max-w-4xl">
           <p className="eyebrow mb-6">Byggtips</p>
           <h1 className="heading-xl">Guider inför ditt byggprojekt</h1>

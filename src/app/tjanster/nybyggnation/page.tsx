@@ -77,10 +77,10 @@ const faqs = [
 export default function NewConstructionPage() {
   return (
     <main>
-      <section className="container grid items-center gap-12 py-16 lg:grid-cols-2 lg:py-24">
+      <section className="container service-hero">
         <div>
           <p className="eyebrow mb-6">Nybyggnation</p>
-          <h1 className="text-[clamp(2.1rem,3.6vw,3.8rem)] font-bold leading-[1.08]">
+          <h1 className="heading-service">
             Nybyggnation i Solna & Stockholm
           </h1>
           <p className="body-lg mt-8">
@@ -99,13 +99,13 @@ export default function NewConstructionPage() {
           </div>
         </div>
         <figure className="surface overflow-hidden">
-          <div className="relative aspect-[4/5] sm:aspect-[5/4] lg:aspect-[4/5]">
+          <div className="hero-image">
             <Image
               src="/images/projects/blanchevagen/nybyggnation-allrum-danderyd.jpeg"
               alt="Ljust allrum i nybyggnation på Blanchevägen i Danderyd"
               fill
               priority
-              sizes="(min-width: 1024px) 50vw, 100vw"
+              sizes="(min-width: 1244px) 566px, (min-width: 1024px) calc((100vw - 112px) / 2), (min-width: 768px) calc(100vw - 64px), calc(100vw - 32px)"
               className="object-cover"
             />
           </div>

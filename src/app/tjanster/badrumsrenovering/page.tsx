@@ -84,10 +84,10 @@ const faqs = [
 export default function BathroomRenovationPage() {
   return (
     <main>
-      <section className="container grid items-center gap-12 py-16 lg:grid-cols-2 lg:py-24">
+      <section className="container service-hero">
         <div>
           <p className="eyebrow mb-6">Badrumsrenovering</p>
-          <h1 className="text-[clamp(1.85rem,3.2vw,3.5rem)] font-bold leading-[1.08]">
+          <h1 className="heading-service">
             Badrumsrenovering i Solna & Stockholm
           </h1>
           <p className="body-lg mt-8">
@@ -106,19 +106,19 @@ export default function BathroomRenovationPage() {
           </div>
         </div>
         <figure className="surface overflow-hidden">
-          <div className="relative aspect-[4/5] sm:aspect-[5/4] lg:aspect-[4/5]">
+          <div className="hero-image">
             <Image
-              src="/images/projects/blanchevagen/nybyggnation-mikrocementbadrum-danderyd.jpeg"
-              alt="Färdigt badrum med mikrocement i nybyggnation på Blanchevägen i Danderyd"
+              src="/images/projects/frejgatan/badrum-frejgatan.webp"
+              alt="Badrum på Frejgatan under slutmontering, med nischer och duschvägg"
               fill
               priority
-              quality={85}
-              sizes="(min-width: 1024px) 50vw, 100vw"
+              quality={75}
+              sizes="(min-width: 1244px) 566px, (min-width: 1024px) calc((100vw - 112px) / 2), (min-width: 768px) calc(100vw - 64px), calc(100vw - 32px)"
               className="object-cover"
             />
           </div>
           <figcaption className="border-t border-[var(--color-border)] bg-[var(--color-surface)] p-5 text-sm font-semibold text-[var(--color-muted)]">
-            Badrum i nybyggnation · Blanchevägen, Danderyd
+            Badrumsrenovering under slutmontering · Frejgatan, Stockholm
           </figcaption>
         </figure>
       </section>

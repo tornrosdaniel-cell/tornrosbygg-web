@@ -59,17 +59,17 @@ const faqs = [
 export default function MarkarbetenPage() {
   return (
     <main>
-      <section className="container grid items-center gap-12 py-16 lg:grid-cols-2 lg:py-24">
+      <section className="container service-hero">
         <div>
           <p className="eyebrow mb-6">Mark & grundförberedelser</p>
-          <h1 className="text-[clamp(2.2rem,4vw,4.25rem)] font-bold leading-[1.08]">Markarbeten i Solna & Stockholm</h1>
+          <h1 className="heading-service">Markarbeten i Solna & Stockholm</h1>
           <p className="body-lg mt-8">Ett genomtänkt markarbete börjar med platsen. Törnros Bygg hjälper till med markarbeten inför byggnation och runt befintliga hus, med hänsyn till åtkomst, markförhållanden och det som ska göras ovanför mark.</p>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
             <Link href="/kontakt" className="button button-primary">Berätta om ditt markprojekt</Link>
             <Link href="/tjanster/dranering/" className="button button-secondary">Se även dränering</Link>
           </div>
         </div>
-        <aside className="flex min-h-[28rem] flex-col justify-between rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-ink)] p-8 text-[var(--color-surface)] md:p-12">
+        <aside className="flex min-h-72 lg:min-h-96 flex-col justify-between rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-ink)] p-8 text-[var(--color-surface)] md:p-12">
           <p className="eyebrow !text-[var(--color-accent-soft)]">Under ytan</p>
           <div>
             <p className="text-[clamp(2rem,3.5vw,3.5rem)] font-bold leading-[1.1]">Det som görs i marken påverkar allt som kommer efter.</p>

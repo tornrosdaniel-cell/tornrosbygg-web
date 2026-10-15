@@ -59,14 +59,14 @@ const faqs = [
 export default function DraneringPage() {
   return (
     <main>
-      <section className="container grid items-center gap-12 py-16 lg:grid-cols-2 lg:py-24">
+      <section className="container service-hero">
         <div>
           <p className="eyebrow mb-6">Dränering & arbeten vid grund</p>
-          <h1 className="text-[clamp(2.2rem,4vw,4.25rem)] font-bold leading-[1.08]">Dränering i Solna & Stockholm</h1>
+          <h1 className="heading-service">Dränering i Solna & Stockholm</h1>
           <p className="body-lg mt-8">När mark och vatten påverkar huset är det viktigt att förstå förutsättningarna innan arbetet börjar. Törnros Bygg hjälper till att planera och utföra dräneringsarbeten runt husgrunder med hänsyn till grund, mark, ledningar och ytorna runt huset.</p>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row"><Link href="/kontakt" className="button button-primary">Berätta om ditt hus</Link><Link href="/tjanster/markarbeten/" className="button button-secondary">Se även markarbeten</Link></div>
         </div>
-        <aside className="flex min-h-[28rem] flex-col justify-between rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-ink)] p-8 text-[var(--color-surface)] md:p-12">
+        <aside className="flex min-h-72 lg:min-h-96 flex-col justify-between rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-ink)] p-8 text-[var(--color-surface)] md:p-12">
           <p className="eyebrow !text-[var(--color-accent-soft)]">Börja med förutsättningarna</p>
           <div><p className="text-[clamp(2rem,3.5vw,3.5rem)] font-bold leading-[1.1]">Rätt omfattning börjar med en genomgång av huset.</p><p className="mt-7 max-w-md leading-8 text-stone-300">Grund, marknivåer och befintlig avvattning avgör vilka frågor som behöver redas ut inför ett dräneringsarbete.</p></div>
         </aside>

@@ -138,7 +138,7 @@ export function ContactForm() {
       />
 
       <label className="grid gap-2 text-sm font-bold text-[var(--color-ink)]">
-        Projektbeskrivning <span className="text-[var(--color-accent-dark)]">*</span>
+        <span>Projektbeskrivning <span className="text-[var(--color-accent-dark)]">*</span></span>
         <textarea
           name="message"
           required
