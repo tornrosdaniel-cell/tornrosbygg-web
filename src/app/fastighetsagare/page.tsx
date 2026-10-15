@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Byggarbeten för fastighetsägare | Törnros Bygg",
+  title: "Byggprojekt för fastighetsägare & BRF | Törnros Bygg",
   description: "Törnros Bygg utför renoveringar och byggarbeten för fastighetsägare och bostadsrättsföreningar i Solna och Stockholm.",
-  alternates: { canonical: "/fastighetsagare/" },
+  alternates: { canonical: "/fastighetsagare" },
 };
 
 const needs = [
@@ -31,6 +31,15 @@ export default function FastighetsagarePage() {
       </section>
       <section className="section border-y border-[var(--color-border)] bg-[var(--color-surface)]"><div className="container"><div className="max-w-3xl"><p className="eyebrow mb-4">Olika uppdrag</p><h2 className="heading-lg">När fastigheten ska utvecklas</h2><p className="body-lg mt-6">Omfattning och upplägg behöver anpassas efter byggnaden och vilka ytor som berörs.</p></div><div className="mt-12 grid gap-px overflow-hidden rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-border)] md:grid-cols-3">{needs.map((item) => <article key={item.title} className="bg-[var(--color-surface)] p-7"><h3 className="heading-md">{item.title}</h3><p className="body-copy mt-4">{item.text}</p></article>)}</div></div></section>
       <section className="section"><div className="container grid gap-10 lg:grid-cols-2"><div><p className="eyebrow mb-4">Inför arbetet</p><h2 className="heading-lg">Ett tydligt uppdrag underlättar</h2></div><div><p className="body-lg">Vår erfarenhet från renovering, tillbyggnad och nybyggnation hjälper oss att se hur byggmomenten hänger ihop. Vi börjar med att gå igenom fastigheten, underlagen och arbetets omfattning, liksom tillträde och användning under byggtiden.</p><p className="body-copy mt-6">Om något behöver undersökas innan omfattningen kan bestämmas tydliggör vi det i dialogen om nästa steg.</p></div></div></section>
+
+      <section className="section border-b border-[var(--color-border)]"><div className="container grid gap-10 lg:grid-cols-2">
+        <div id="innergardar-och-tak" className="scroll-mt-28"><p className="eyebrow mb-4">Fastighetens yttre delar</p><h2 className="heading-lg">Innergårdar och takarbeten</h2><p className="body-lg mt-6">Vi utför projekt på innergårdar och tak. Arbetets omfattning planeras utifrån befintligt skick, tillträde och hur fastigheten används. Markytor, avvattning och återställning behöver samordnas med övriga byggmoment.</p></div>
+        <div id="lekplatser-och-ravindar" className="scroll-mt-28"><p className="eyebrow mb-4">Nya användningar</p><h2 className="heading-lg">Lekplatser och råvindsprojekt</h2><p className="body-lg mt-6">Vi tar oss an byggprojekt för lekplatser och råvindar. Inför uppdraget går vi igenom användning, underlag och vilka projekterings- och specialistinsatser som behövs. Förutsättningar och eventuella beslut klarläggs innan arbetets omfattning bestäms.</p></div>
+      </div></section>
+      <section id="projektledning-och-besiktning" className="section scroll-mt-28"><div className="container grid gap-10 lg:grid-cols-2">
+        <div><p className="eyebrow mb-4">Fristående uppdrag</p><h2 className="heading-lg">Projektledning och besiktning</h2></div>
+        <div><p className="body-lg">Du kan anlita oss för avgränsade uppdrag inom projektledning eller besiktning av byggarbeten. Vi går igenom behovet och kommer överens om vilka moment, underlag och avstämningar uppdraget omfattar.</p><p className="body-copy mt-6">Vid en besiktningsförfrågan behöver typ av genomgång, ansvar och dokumentation tydliggöras innan vi bekräftar uppdraget. Behov av särskild sakkunskap stäms av för det aktuella arbetet.</p><Link href="/kontakt" className="button button-secondary mt-8">Beskriv ert behov</Link></div>
+      </div></section>
       <section className="section pt-0"><div className="container"><div className="surface grid gap-8 p-8 md:p-12 lg:grid-cols-[1fr_auto] lg:items-center"><div><h2 className="heading-lg">Ska ni göra arbeten i en fastighet?</h2><p className="body-lg mt-5">Beskriv byggnaden, behoven och de underlag ni har.</p></div><Link href="/kontakt" className="button button-primary">Kontakta oss</Link></div></div></section>
     </main>
   );

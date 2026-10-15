@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Tillbyggnad i Solna & Stockholm | Törnros Bygg",
   description:
     "Planerar du en tillbyggnad? Törnros Bygg hjälper till med planering och byggarbete för tillbyggnader i Solna och Stockholmsområdet.",
-  alternates: { canonical: "/tjanster/tillbyggnad/" },
+  alternates: { canonical: "/tjanster/tillbyggnad" },
 };
 
 const considerations = [

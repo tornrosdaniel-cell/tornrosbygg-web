@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Integritet | Törnros Bygg",
   description:
     "Så behandlar Törnros Bygg personuppgifter när du kontaktar oss om ett byggprojekt.",
-  alternates: { canonical: "/integritet/" },
+  alternates: { canonical: "/integritet" },
 };
 
 export default function IntegritetPage() {

@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Totalrenovering eller delrenovering? | Törnros Bygg",
   description: "Vägledning för att välja omfattning på en renovering. Se när flera rum bör planeras tillsammans och när ett avgränsat arbete räcker.",
-  alternates: { canonical: "/byggtips/totalrenovering-eller-delrenovering/" },
+  alternates: { canonical: "/byggtips/totalrenovering-eller-delrenovering" },
 };
 
 export default function RenovationScopeGuide() {

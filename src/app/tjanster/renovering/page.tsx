@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Törnros Bygg hjälper privatpersoner och fastighetsägare med renoveringar i Solna och Stockholmsområdet – från enskilda delar till större totalrenoveringar.",
   alternates: {
-    canonical: "/tjanster/renovering/",
+    canonical: "/tjanster/renovering",
   },
 };
 

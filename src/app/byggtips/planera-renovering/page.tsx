@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Planera renovering: omfattning, val och tid | Törnros Bygg",
   description: "En praktisk guide till att planera en renovering: utgå från behoven, samla underlag, bestäm omfattning och stäm av ändringar.",
-  alternates: { canonical: "/byggtips/planera-renovering/" },
+  alternates: { canonical: "/byggtips/planera-renovering" },
 };
 
 export default function PlaneraRenoveringGuide() {

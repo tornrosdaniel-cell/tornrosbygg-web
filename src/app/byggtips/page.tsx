@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Byggtips & guider inför ditt projekt | Törnros Bygg",
   description:
     "Guider om renovering, badrum, dränering, byggofferter, tillbyggnad, ändringar och dokumentation inför ditt byggprojekt.",
-  alternates: { canonical: "/byggtips/" },
+  alternates: { canonical: "/byggtips" },
 };
 
 const guides = [

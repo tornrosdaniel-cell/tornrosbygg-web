@@ -4,9 +4,9 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Tjänster | Bygg & renovering i Stockholm | Törnros Bygg",
   description:
-    "Utforska Törnros Byggs tjänster inom renovering, badrumsrenovering, tillbyggnad, nybyggnation, Attefallshus, markarbeten och dränering i Solna och Stockholmsområdet.",
+    "Utforska Törnros Byggs tjänster inom renovering, badrumsrenovering, tillbyggnad, nybyggnation, Attefallshus, markarbeten och dränering samt pool, utemiljö och projektledning i Solna och Stockholmsområdet.",
   alternates: {
-    canonical: "/tjanster/",
+    canonical: "/tjanster",
   },
 };
 
@@ -46,6 +46,10 @@ const services = [
     href: "/tjanster/dranering/",
     text: "Dräneringsarbeten och åtgärder runt grund, servisledningar och utemiljöer.",
   },
+  {"title":"Poolbyggen och utemiljö","href":"/tjanster/markarbeten#pool-och-utemiljo","text":"Poolprojekt, trädäck och markytor som planeras tillsammans med tomtens förutsättningar."},
+  {"title":"Innergårdar och takarbeten","href":"/fastighetsagare#innergardar-och-tak","text":"Projekt för gårdar, gemensamma utomhusytor och tak i befintliga fastigheter."},
+  {"title":"Lekplatser och råvindsprojekt","href":"/fastighetsagare#lekplatser-och-ravindar","text":"Byggarbeten där användning, befintlig konstruktion och uppdragets gränser behöver klarläggas."},
+  {"title":"Projektledning och besiktning","href":"/fastighetsagare#projektledning-och-besiktning","text":"Fristående uppdrag med överenskommen omfattning för planering, samordning eller genomgång av byggarbeten."}
 ];
 
 export default function ServicesPage() {
@@ -67,9 +71,9 @@ export default function ServicesPage() {
 
       <section className="border-y border-[var(--color-border)] bg-[var(--color-surface)] py-16 md:py-24">
         <div className="container">
-          <div className="grid gap-px overflow-hidden rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-border)] md:grid-cols-2 lg:grid-cols-12">
-            {services.map((service, index) => (
-              <article key={service.href} className={`bg-[var(--color-surface)] p-7 ${index < 3 ? "lg:col-span-4" : "lg:col-span-3"} ${index === services.length - 1 ? "md:col-span-2 lg:col-span-3" : ""}`}>
+          <div className="grid gap-px overflow-hidden rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-border)] md:grid-cols-2 lg:grid-cols-3">
+            {services.map((service) => (
+              <article key={service.href} className="bg-[var(--color-surface)] p-7">
                 <h2 className="heading-md">{service.title}</h2>
                 <p className="body-copy mt-4">{service.text}</p>
                 <Link

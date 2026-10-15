@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Om Törnros Bygg | Byggprojekt med utgångspunkt i Solna",
   description:
     "Lär känna Törnros Bygg och Daniel Törnros. Se projekt inom renovering, tillbyggnad och nybyggnation i Solna och Stockholmsområdet.",
-  alternates: { canonical: "/om-oss/" },
+  alternates: { canonical: "/om-oss" },
 };
 
 const principles = [

@@ -1,0 +1,353 @@
+[
+  {
+    "project": "blanchevagen",
+    "sourcePage": "https://tornrosbygg.se/projekt-nybyggnation-blanchev%C3%A4gen-danderyd/",
+    "inventoriedImages": 28,
+    "rightsStatus": "owner-confirmed",
+    "selected": [
+      {
+        "number": 5,
+        "sourceUrl": "https://tornrosbygg.se/ws/resized-images/756105ad482d455ca873027303971a4f/img_4469.jpeg",
+        "sourceSha256": "1e556fc8fbf3e79c2df68f6d862bf3dad123d567a75df773a66bed157ca40552",
+        "originalWidth": 540,
+        "originalHeight": 405,
+        "phase": "before",
+        "proposedCaption": "Tidigare hus på tomten",
+        "proposedAlt": "Tidigare hus på tomten – blanchevagen",
+        "usage": "not-selected"
+      },
+      {
+        "number": 8,
+        "sourceUrl": "https://tornrosbygg.se/ws/resized-images/6864979cdfca4593b0c7b8054cd98291/img_5039.jpeg",
+        "sourceSha256": "662a2bbefa1167e635c5833b660c472c79aa2b8cb9b011072ba27389bddc750f",
+        "originalWidth": 540,
+        "originalHeight": 405,
+        "phase": "during",
+        "proposedCaption": "Markförberedelser inför husgrunden.",
+        "proposedAlt": "Förberedelser för husgrunden på Blanchevägen i Danderyd",
+        "usage": "gallery",
+        "publicationAsset": "/images/projects/blanchevagen/markforberedelser.webp",
+        "publicationWidth": 540,
+        "publicationHeight": 405,
+        "publicationSha256": "13983f387ac470e309c4a7178697723a5e94298a78feba2b9db1c2f215238761"
+      },
+      {
+        "number": 14,
+        "sourceUrl": "https://tornrosbygg.se/ws/resized-images/094f70629e1a4553b3588e6ec2eff9c4/img_5558.jpeg",
+        "sourceSha256": "f9cbcf20b1f65a52b1fb33c9429238966d50126d983f266d7f43f1041183daa2",
+        "originalWidth": 540,
+        "originalHeight": 405,
+        "phase": "during",
+        "proposedCaption": "Trästommen under uppbyggnad.",
+        "proposedAlt": "Trästomme med väggöppningar på Blanchevägen i Danderyd",
+        "usage": "gallery",
+        "publicationAsset": "/images/projects/blanchevagen/stomme.webp",
+        "publicationWidth": 540,
+        "publicationHeight": 405,
+        "publicationSha256": "b540a81c65e86e264435f67d840ec845a083fdecc576ae74c001d6aa3312210e"
+      },
+      {
+        "number": 28,
+        "sourceUrl": "https://tornrosbygg.se/ws/resized-images/1391b491a1b041fa983246de8581450a/img_6857.jpeg",
+        "sourceSha256": "11c8d3aec7233d9e853994197e2625cf974e854355d364f57e9043064c73cfbb",
+        "originalWidth": 540,
+        "originalHeight": 405,
+        "proposedCaption": "Allrum med takljus och glasdörrar.",
+        "proposedAlt": "Allrum med takljus och glasdörrar på Blanchevägen i Danderyd",
+        "usage": "gallery",
+        "publicationAsset": "/images/projects/blanchevagen/allrum-takljus.webp",
+        "publicationWidth": 540,
+        "publicationHeight": 405,
+        "publicationSha256": "19c7086460a76707579b44d821fb90ac79d8ed1569ec80b6886ccbe7cf09603b"
+      }
+    ],
+    "rightsEvidence": "Ägaren bekräftade i projektchatten att samtliga 21 äldre bildkandidater tillhör företaget och får återanvändas."
+  },
+  {
+    "project": "frejgatan",
+    "sourcePage": "https://tornrosbygg.se/projekt-badrum-frejgatan-stockholm/",
+    "inventoriedImages": 8,
+    "rightsStatus": "owner-confirmed",
+    "selected": [
+      {
+        "number": 1,
+        "sourceUrl": "https://tornrosbygg.se/ws/resized-images/7733ffa2956f4582a99398cae54eb83d/img_6771.jpeg",
+        "sourceSha256": "8539d9d81cc83c0453c38658fc8bc99ff2cd4168481d95b9c8b89fbaba2e6cdd",
+        "originalWidth": 540,
+        "originalHeight": 405,
+        "phase": "before",
+        "proposedCaption": "Badrummet före renoveringen.",
+        "proposedAlt": "Det äldre badrummet på Frejgatan i Stockholm före renoveringen",
+        "usage": "gallery",
+        "publicationAsset": "/images/projects/frejgatan/badrum-fore.webp",
+        "publicationWidth": 540,
+        "publicationHeight": 405,
+        "publicationSha256": "09f38a82e4bcd01ed3ba52fb33eadef016c1182a52d9c614b64d4fe41031998c"
+      },
+      {
+        "number": 2,
+        "sourceUrl": "https://tornrosbygg.se/ws/resized-images/54e244d1affa446585a09d34dd0637e2/img_6794.jpeg",
+        "sourceSha256": "155b636430f742c6cf6a40eb613b451923701af9aa4580d1de27cc59c9a57441",
+        "originalWidth": 540,
+        "originalHeight": 405,
+        "phase": "during",
+        "proposedCaption": "Golvbrunnen under rivningsarbetet.",
+        "proposedAlt": "Frilagd golvbrunn under rivning av badrummet på Frejgatan",
+        "usage": "gallery",
+        "publicationAsset": "/images/projects/frejgatan/golvbrunn-rivning.webp",
+        "publicationWidth": 540,
+        "publicationHeight": 405,
+        "publicationSha256": "4ee138606cfb9427dab53ece3d03926775daa58ac0c1b52aa89517733a7510f0"
+      },
+      {
+        "number": 6,
+        "sourceUrl": "https://tornrosbygg.se/ws/resized-images/5698503f691d4a1c99471482ee323532/img_7072.jpeg",
+        "sourceSha256": "3c4ef128a61498d3a76faec66edc33e379987cca45d54cb2a65da889dbb2c371",
+        "originalWidth": 540,
+        "originalHeight": 405,
+        "phase": "during",
+        "proposedCaption": "Badrumsgolvet under uppbyggnad.",
+        "proposedAlt": "Läggning av golvplattor i badrummet på Frejgatan",
+        "usage": "gallery",
+        "publicationAsset": "/images/projects/frejgatan/golvplattor-under-arbete.webp",
+        "publicationWidth": 540,
+        "publicationHeight": 405,
+        "publicationSha256": "c04da9cce60951b995122a09dfce52f188254ac48bdd5ad14a234bb5fc261c4c"
+      }
+    ],
+    "rightsEvidence": "Ägaren bekräftade i projektchatten att samtliga 21 äldre bildkandidater tillhör företaget och får återanvändas."
+  },
+  {
+    "project": "namndemansgatan",
+    "sourcePage": "https://tornrosbygg.se/projekt-renovering-n%C3%A4mndemansgatan-solna/",
+    "inventoriedImages": 9,
+    "rightsStatus": "owner-confirmed",
+    "selected": [
+      {
+        "number": 2,
+        "sourceUrl": "https://tornrosbygg.se/ws/resized-images/6a337172a7084ed0b5c785d01f2eb0e1/namndemansg.-fore-4.jpeg",
+        "sourceSha256": "836a63ca5bcf629280fd8a813f8f1dc3bd2e523c4c63bc7bf52fdb771d6e136f",
+        "originalWidth": 540,
+        "originalHeight": 405,
+        "phase": "during",
+        "proposedCaption": "Rummet under rivningsarbetet.",
+        "proposedAlt": "Rum med frilagda väggar under rivning på Nämndemansgatan i Solna",
+        "usage": "gallery",
+        "publicationAsset": "/images/projects/namndemansgatan/rum-under-rivning.webp",
+        "publicationWidth": 540,
+        "publicationHeight": 405,
+        "publicationSha256": "413fa29f05d5971e52689c4146e6404a9e4e198bfbf63087534b9f3af99e0ca8"
+      },
+      {
+        "number": 5,
+        "sourceUrl": "https://tornrosbygg.se/ws/resized-images/b5d502d34e3e4755988cad2705251899/img_2044.jpeg",
+        "sourceSha256": "778c3bc5d4bc8c2f02544c2dec9efec9582f1565db397ef5861e476f8b64f76c",
+        "originalWidth": 540,
+        "originalHeight": 405,
+        "phase": "during",
+        "proposedCaption": "Golvet under uppbyggnad",
+        "proposedAlt": "Golvet under uppbyggnad – namndemansgatan",
+        "usage": "not-selected"
+      },
+      {
+        "number": 7,
+        "sourceUrl": "https://tornrosbygg.se/ws/resized-images/875917327a2441f8a42da9fd7a2afcc1/img_3535.jpeg",
+        "sourceSha256": "31482d3d7c0ff83cad1eb3045fc1fcd9dc53ec0377b559c93fb6d7c549b0fe16",
+        "originalWidth": 540,
+        "originalHeight": 405,
+        "phase": "during",
+        "proposedCaption": "Invändiga arbeten under renoveringen.",
+        "proposedAlt": "Bostaden på Nämndemansgatan under renovering med material och stege",
+        "usage": "gallery",
+        "publicationAsset": "/images/projects/namndemansgatan/bostad-under-renovering.webp",
+        "publicationWidth": 540,
+        "publicationHeight": 405,
+        "publicationSha256": "d164fad488a5933a2bc0bde6c0319c715e8d01c0157df7206d8304b218167737"
+      },
+      {
+        "number": 8,
+        "sourceUrl": "https://tornrosbygg.se/ws/resized-images/ebeace269b9c482ebe8dd986ccce2563/namndemansg.-efter-4.jpeg",
+        "sourceSha256": "b97741ea98e43b7ce4bc5e7e2675b136201ba5c01be63c8bc2bdd7b53c499958",
+        "originalWidth": 540,
+        "originalHeight": 720,
+        "proposedCaption": "Badrum med badkar och sexkantiga golvplattor.",
+        "proposedAlt": "Badrum med badkar och sexkantiga golvplattor på Nämndemansgatan",
+        "usage": "gallery",
+        "publicationAsset": "/images/projects/namndemansgatan/badrum-med-badkar.webp",
+        "publicationWidth": 540,
+        "publicationHeight": 720,
+        "publicationSha256": "b7c943c62f3e1e276be0058f795fdda051a78c5d8cd6227a1f1df60879cd68f1"
+      }
+    ],
+    "rightsEvidence": "Ägaren bekräftade i projektchatten att samtliga 21 äldre bildkandidater tillhör företaget och får återanvändas."
+  },
+  {
+    "project": "attefallshus",
+    "sourcePage": "https://tornrosbygg.se/projekt-attefallare-solna/",
+    "inventoriedImages": 8,
+    "rightsStatus": "owner-confirmed",
+    "selected": [
+      {
+        "number": 3,
+        "sourceUrl": "https://tornrosbygg.se/ws/resized-images/b9073cf4f7c24d32b69d344cceb9d36e/img_1016.jpeg",
+        "sourceSha256": "1ae0295d3b589a2925ed7cc7f595f60694d535be26cfd695fad41ccfd61548d0",
+        "originalWidth": 540,
+        "originalHeight": 405,
+        "phase": "during",
+        "proposedCaption": "Armering och rör inför grundläggningen.",
+        "proposedAlt": "Armering och rördragning inför grunden till attefallshuset på Sjövägen i Solna",
+        "usage": "gallery",
+        "publicationAsset": "/images/projects/attefallshus-sjovagen/grund-armering.webp",
+        "publicationWidth": 540,
+        "publicationHeight": 405,
+        "publicationSha256": "0f144d83413c4d9c686e3476ee1eb9293710e15fb115eb65c4c747cb2d2d0259"
+      },
+      {
+        "number": 4,
+        "sourceUrl": "https://tornrosbygg.se/ws/resized-images/1e3f61c8249d4e73853ea963f1f01654/img_1040.jpeg",
+        "sourceSha256": "68ef36cbd9bc328aaa2af6939068df4a5d0d76dcbe8f5af0267c80a7f7072b50",
+        "originalWidth": 540,
+        "originalHeight": 405,
+        "phase": "during",
+        "proposedCaption": "Attefallshusets stomme under uppbyggnad.",
+        "proposedAlt": "Trästommen till attefallshuset på Sjövägen under uppbyggnad",
+        "usage": "gallery",
+        "publicationAsset": "/images/projects/attefallshus-sjovagen/stomme-under-arbete.webp",
+        "publicationWidth": 540,
+        "publicationHeight": 405,
+        "publicationSha256": "6d0431e4b673f6a94ef27e1285ccbd494ea29daa3c4e1de38212ea5ee5063e57"
+      },
+      {
+        "number": 6,
+        "sourceUrl": "https://tornrosbygg.se/ws/resized-images/96bbf9e2323640e9bbe03bbecb90bc45/img_1300.jpeg",
+        "sourceSha256": "6abc9e88a15c680c764b9e6418cd3b24d709e6e124a0f0b9be7541629f7d08b6",
+        "originalWidth": 540,
+        "originalHeight": 405,
+        "phase": "during",
+        "proposedCaption": "Golvläggning i attefallshuset",
+        "proposedAlt": "Golvläggning i attefallshuset – attefallshus",
+        "usage": "not-selected"
+      }
+    ],
+    "rightsEvidence": "Ägaren bekräftade i projektchatten att samtliga 21 äldre bildkandidater tillhör företaget och får återanvändas."
+  },
+  {
+    "project": "tillbyggnad",
+    "sourcePage": "https://tornrosbygg.se/projekt-tillbyggnad-solna/",
+    "inventoriedImages": 3,
+    "rightsStatus": "owner-confirmed",
+    "selected": [
+      {
+        "number": 2,
+        "sourceUrl": "https://tornrosbygg.se/ws/media-library/9e6bc16848a84bbd8e311bdbc63b4467/img_1057.jpg",
+        "sourceSha256": "4ec29d02d94172b1233385e0c02ab20e71662f5209aaab0c3942dfee146d8e20",
+        "originalWidth": 480,
+        "originalHeight": 640,
+        "phase": "during",
+        "proposedCaption": "Tillbyggnaden under invändigt arbete.",
+        "proposedAlt": "Tillbyggnaden på Sjövägen med väggar och bjälklag under invändigt arbete",
+        "usage": "gallery",
+        "publicationAsset": "/images/projects/sjovagen/tillbyggnad-invandigt-arbete.webp",
+        "publicationWidth": 480,
+        "publicationHeight": 640,
+        "publicationSha256": "ca2b4522cc4bf7d8c2f274abe980ef727cd1b9872ff9fa868f96c68fac81d7a8"
+      }
+    ],
+    "rightsEvidence": "Ägaren bekräftade i projektchatten att samtliga 21 äldre bildkandidater tillhör företaget och får återanvändas."
+  },
+  {
+    "project": "pool",
+    "sourcePage": "https://tornrosbygg.se/projekt-poolbygge-sj%C3%B6v%C3%A4gen-solna/",
+    "inventoriedImages": 8,
+    "rightsStatus": "owner-confirmed",
+    "selected": [
+      {
+        "number": 4,
+        "sourceUrl": "https://tornrosbygg.se/ws/resized-images/2c124043dbc14eb791b3cc3a98ff9d0b/img_5893.jpeg",
+        "sourceSha256": "074310866cbe619cedb6d89d8f02e5cd95594418e1a1dece92d24d9c0af13755",
+        "originalWidth": 540,
+        "originalHeight": 405,
+        "phase": "during",
+        "proposedCaption": "Förberedelser av poolens underlag",
+        "proposedAlt": "Förberedelser av poolens underlag – pool",
+        "usage": "not-selected"
+      },
+      {
+        "number": 6,
+        "sourceUrl": "https://tornrosbygg.se/ws/resized-images/8a74da11ae8d41c0b079c21d683e37ce/img_6161-1.jpeg",
+        "sourceSha256": "c0588d4566d901ee66b9ae796f07b2f08dea2639ea82f7fb7c05028649be4f8f",
+        "originalWidth": 540,
+        "originalHeight": 405,
+        "phase": "during",
+        "proposedCaption": "Poolens väggar under uppbyggnad.",
+        "proposedAlt": "Poolväggar under uppbyggnad på Sjövägen i Solna",
+        "usage": "gallery",
+        "publicationAsset": "/images/projects/pool-sjovagen/poolvaggar-under-arbete.webp",
+        "publicationWidth": 540,
+        "publicationHeight": 405,
+        "publicationSha256": "5a1df1f48b58826de0470302189d8e89498f687d166765c24db33ce2865f9601"
+      },
+      {
+        "number": 8,
+        "sourceUrl": "https://tornrosbygg.se/ws/resized-images/099b414276944734a6d9b368526cb7a2/img_6451.jpeg",
+        "sourceSha256": "4791c66412124fc50f12931e3e8cb97478d15f23571b20a6358bbc8575217708",
+        "originalWidth": 540,
+        "originalHeight": 405,
+        "phase": "during",
+        "proposedCaption": "Pool och trädäck under arbete",
+        "proposedAlt": "Pool och trädäck under arbete – pool",
+        "usage": "existing-hero",
+        "publicationAsset": "/images/projects/pool-sjovagen/poolbygge-sjovagen.webp",
+        "note": "Samma foto som befintlig huvudbild, i lägre upplösning. Ingen extra galleriinstans eller bildfil.",
+        "comparisonMeanAbsoluteError": 1.8053385416666667
+      }
+    ],
+    "rightsEvidence": "Ägaren bekräftade i projektchatten att samtliga 21 äldre bildkandidater tillhör företaget och får återanvändas."
+  },
+  {
+    "project": "servisbyte",
+    "sourcePage": "https://tornrosbygg.se/projekt-servisbyte-och-dr%C3%A4nering/",
+    "inventoriedImages": 9,
+    "rightsStatus": "owner-confirmed",
+    "selected": [
+      {
+        "number": 5,
+        "sourceUrl": "https://tornrosbygg.se/ws/media-library/a26f6f52b0cdca97aa852652a843b72e/img_1719.jpeg",
+        "sourceSha256": "fc34569dfd795289f3ef4f2f670f1c2766f65d86722eccdac1ccf2af4a98cbfe",
+        "originalWidth": 1536,
+        "originalHeight": 2048,
+        "phase": "during",
+        "proposedCaption": "Ledningen i schaktet under markarbetet.",
+        "proposedAlt": "Ledning i öppet schakt vid fastigheten i Solna",
+        "usage": "gallery",
+        "publicationAsset": "/images/projects/servisbyte-solna/ledning-i-schakt.webp",
+        "publicationWidth": 960,
+        "publicationHeight": 1280,
+        "publicationSha256": "254f26a70ed6b3df08bb5f00b8f0797fac5f72adbb68b174887f6629621194cd"
+      },
+      {
+        "number": 8,
+        "sourceUrl": "https://tornrosbygg.se/ws/media-library/c402254307e259ad9788d45e63b56bd2/img_1712.jpeg",
+        "sourceSha256": "212a91dce60210504266519f2fad9c0152c0be5f0eac84fb908349a87de4c113",
+        "originalWidth": 1536,
+        "originalHeight": 2048,
+        "phase": "during",
+        "proposedCaption": "Arbete längs husgrunden",
+        "proposedAlt": "Arbete längs husgrunden – servisbyte",
+        "usage": "not-selected"
+      },
+      {
+        "number": 9,
+        "sourceUrl": "https://tornrosbygg.se/ws/media-library/af1f883518159606412cb47d21e9dddc/img_19741.jpeg",
+        "sourceSha256": "4e8825a9e52a8a5a77d2fd4494d2a8cdc25e51e1a8935d9fa45d96103cee7986",
+        "originalWidth": 2048,
+        "originalHeight": 1536,
+        "phase": "after",
+        "proposedCaption": "Markytor efter återställning",
+        "proposedAlt": "Markytor efter återställning – servisbyte",
+        "usage": "not-selected"
+      }
+    ],
+    "rightsEvidence": "Ägaren bekräftade i projektchatten att samtliga 21 äldre bildkandidater tillhör företaget och får återanvändas."
+  }
+]

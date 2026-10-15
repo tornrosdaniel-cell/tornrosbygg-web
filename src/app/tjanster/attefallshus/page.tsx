@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Attefallshus i Solna & Stockholm | Törnros Bygg",
   description:
     "Planerar du ett Attefallshus eller en annan komplementbyggnad? Törnros Bygg hjälper till att planera och bygga utifrån tomt, användning och projektets omfattning.",
-  alternates: { canonical: "/tjanster/attefallshus/" },
+  alternates: { canonical: "/tjanster/attefallshus" },
 };
 
 const uses = [

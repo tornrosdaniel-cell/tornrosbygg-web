@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Planerar du att renovera badrummet? Törnros Bygg hjälper till med badrumsprojekt i Solna och Stockholmsområdet, från första genomgång till färdigt rum.",
   alternates: {
-    canonical: "/tjanster/badrumsrenovering/",
+    canonical: "/tjanster/badrumsrenovering",
   },
 };
 

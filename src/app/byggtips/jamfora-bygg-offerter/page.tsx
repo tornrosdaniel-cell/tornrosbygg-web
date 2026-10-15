@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Jämföra byggofferter: vad ingår? | Törnros Bygg",
   description: "Frågor att ställa när du jämför byggofferter. Se efter vad som ingår, vilka val som återstår och hur ändringar ska stämmas av.",
-  alternates: { canonical: "/byggtips/jamfora-bygg-offerter/" },
+  alternates: { canonical: "/byggtips/jamfora-bygg-offerter" },
 };
 
 export default function OfferterGuide() {

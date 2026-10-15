@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Inför dränering: undersök hus & mark | Törnros Bygg",
   description: "Vad bör du ta reda på innan ett dräneringsarbete? Gå igenom fukttecken, grundens utformning, mark, åtkomst och återställning.",
-  alternates: { canonical: "/byggtips/infor-dranering/" },
+  alternates: { canonical: "/byggtips/infor-dranering" },
 };
 
 export default function DrainagePreparationGuide() {

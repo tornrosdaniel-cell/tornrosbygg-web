@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Förbereda tillbyggnad: hus, mark och behov | Törnros Bygg",
   description: "Praktiska frågor inför en tillbyggnad: syftet med ytan, mötet med befintligt hus, markens förutsättningar och vardagen under bygget.",
-  alternates: { canonical: "/byggtips/forbereda-tillbyggnad/" },
+  alternates: { canonical: "/byggtips/forbereda-tillbyggnad" },
 };
 
 export default function TillbyggnadGuide() {

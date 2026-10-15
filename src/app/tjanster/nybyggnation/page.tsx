@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Nybyggnation i Solna & Stockholm | Törnros Bygg",
   description:
     "Planerar du att bygga nytt? Törnros Bygg hjälper till med nybyggnationsprojekt i Solna och Stockholmsområdet, från projektets förutsättningar till färdiga ytor.",
-  alternates: { canonical: "/tjanster/nybyggnation/" },
+  alternates: { canonical: "/tjanster/nybyggnation" },
 };
 
 const foundations = [

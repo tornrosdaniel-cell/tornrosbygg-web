@@ -4,7 +4,7 @@ import { ContactForm } from "@/components/contact-form";
 export const metadata: Metadata = {
   title: "Kontakt | Törnros Bygg",
   description: "Kontakta Törnros Bygg om renovering, nybyggnation och markarbeten i Solna och Stockholmsområdet.",
-  alternates: { canonical: "/kontakt/" },
+  alternates: { canonical: "/kontakt" },
 };
 
 export default function KontaktPage() {

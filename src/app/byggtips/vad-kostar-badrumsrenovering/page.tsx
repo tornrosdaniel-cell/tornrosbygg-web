@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Vad kostar badrumsrenovering? Faktorer & offert | Törnros Bygg",
   description: "Förstå vad som påverkar kostnaden för att renovera ett badrum: befintligt skick, installationer, materialval och vad som ingår i offerten.",
-  alternates: { canonical: "/byggtips/vad-kostar-badrumsrenovering/" },
+  alternates: { canonical: "/byggtips/vad-kostar-badrumsrenovering" },
 };
 
 export default function BathroomCostGuide() {

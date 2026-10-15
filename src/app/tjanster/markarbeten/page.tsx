@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Markarbeten i Solna & Stockholm | Törnros Bygg",
   description:
     "Markarbeten inför byggnation och arbeten runt hus och fastighet. Törnros Bygg går igenom markens förutsättningar, åtkomst och arbetets omfattning.",
-  alternates: { canonical: "/tjanster/markarbeten/" },
+  alternates: { canonical: "/tjanster/markarbeten" },
 };
 
 const areas = [
@@ -96,6 +96,8 @@ export default function MarkarbetenPage() {
       <section className="section"><div className="container"><div className="max-w-3xl"><p className="eyebrow mb-4">Frågor</p><h2 className="heading-lg">Vanliga frågor om markarbeten</h2></div><div className="mt-10 divide-y divide-[var(--color-border)] border-y border-[var(--color-border)]">{faqs.map((item) => <details key={item.question} className="group py-6"><summary className="flex items-center justify-between gap-6 text-left text-xl font-bold">{item.question}<span className="text-2xl text-[var(--color-accent-dark)] group-open:rotate-45">+</span></summary><p className="body-copy mt-4 max-w-3xl">{item.answer}</p></details>)}</div></div></section>
 
       <section className="section pt-0"><div className="container"><div className="surface grid gap-8 p-8 md:p-12 lg:grid-cols-[1fr_auto] lg:items-center"><div><h2 className="heading-lg">Vad vill du göra med marken?</h2><p className="body-lg mt-5 max-w-2xl">Beskriv platsen och vad du vill bygga eller förändra. Har du ritningar eller andra underlag får du gärna ta med dem när vi pratar om nästa steg.</p></div><Link href="/kontakt" className="button button-primary">Berätta om ditt projekt</Link></div></div></section>
+
+      <section id="pool-och-utemiljo" className="section scroll-mt-28"><div className="container grid gap-10 lg:grid-cols-2"><div><p className="eyebrow mb-4">Tomt och utemiljö</p><h2 className="heading-lg">Poolbyggen och utemiljö</h2></div><div><p className="body-lg">Vi arbetar med poolbyggen och utemiljöer där pool, trädäck, marknivåer och ytor för umgänge behöver fungera tillsammans. Omfattningen bestäms utifrån tomten och den poollösning som väljs.</p><p className="body-copy mt-6">På Sjövägen i Solna finns ett dokumenterat poolprojekt med trädäck och planering för sittgrupp och utekök.</p><Link href="/projekt/poolbygge-sjovagen-solna" className="button button-secondary mt-8">Se poolprojektet på Sjövägen</Link><Link href="/kontakt" className="mt-6 block font-bold text-[var(--color-accent-dark)] underline">Berätta om din utemiljö</Link></div></div></section>
     </main>
   );
 }

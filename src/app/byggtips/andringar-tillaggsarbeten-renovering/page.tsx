@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Ändringar och tillägg vid renovering | Törnros Bygg",
   description: "Hur hanterar du ändringar och tilläggsarbeten under en renovering? Gå igenom omfattning, pris, tid och hur beslut dokumenteras.",
-  alternates: { canonical: "/byggtips/andringar-tillaggsarbeten-renovering/" },
+  alternates: { canonical: "/byggtips/andringar-tillaggsarbeten-renovering" },
 };
 
 export default function ChangesDuringRenovationGuide() {

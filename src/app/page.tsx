@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { getFeaturedProjects, projectPath } from "@/content/projects";
 
 export const metadata: Metadata = {
   title: "Byggföretag i Solna & Stockholm | Törnros Bygg",
@@ -42,44 +43,7 @@ const services = [
   },
 ];
 
-const projects = [
-  {
-    title: "Nybyggnation",
-    place: "Blanchevägen, Danderyd",
-    href: "/projekt/nybyggnation-blanchevagen-danderyd",
-    text: "Nybyggnation med omfattande markarbete och ett större bostadsprojekt.",
-    image: {
-      src: "/images/projects/blanchevagen/nybyggnation-allrum-danderyd.jpeg",
-      width: 964,
-      height: 723,
-      alt: "Allrum i nybyggnation på Blanchevägen i Danderyd",
-    },
-  },
-  {
-    title: "Renovering",
-    place: "Nämndemansgatan, Solna",
-    href: "/projekt/renovering-namndemansgatan-solna",
-    text: "Renovering av lägenhet med flera rum, badrum, kök och nya ytskikt.",
-    image: {
-      src: "/images/projects/namndemansgatan/renovering-vardagsrum-solna.jpeg",
-      width: 2048,
-      height: 1536,
-      alt: "Färdigt vardagsrum efter renovering på Nämndemansgatan i Solna",
-    },
-  },
-  {
-    title: "Tillbyggnad",
-    place: "Sjövägen, Solna",
-    href: "/projekt/tillbyggnad-sjovagen-solna",
-    text: "Tillbyggnad med ny boyta, terrass och garage i anslutning till huset.",
-    image: {
-      src: "/images/projects/sjovagen/tillbyggnad-solna.jpeg",
-      width: 740,
-      height: 555,
-      alt: "Tillbyggnad på Sjövägen i Solna",
-    },
-  },
-];
+const projects = getFeaturedProjects();
 
 const testimonials = [
   {
@@ -169,11 +133,11 @@ export default function Home() {
           </div>
           <div className="mt-12 grid gap-6 lg:grid-cols-3">
             {projects.map((project) => (
-              <article key={project.href} className="surface overflow-hidden">
+              <article key={projectPath(project)} className="surface overflow-hidden">
                 <div className="relative aspect-[4/3]">
                   <Image
-                    src={project.image.src}
-                    alt={project.image.alt}
+                    src={project.hero.src}
+                    alt={project.hero.alt}
                     fill
                     quality={75}
                     sizes="(min-width: 1244px) 377px, (min-width: 1024px) calc((100vw - 112px) / 3), (min-width: 768px) calc(100vw - 64px), calc(100vw - 32px)"
@@ -182,10 +146,10 @@ export default function Home() {
                 </div>
                 <div className="p-7">
                   <p className="eyebrow mb-3">{project.title}</p>
-                  <h3 className="heading-md">{project.place}</h3>
-                  <p className="body-copy mt-4">{project.text}</p>
+                  <h3 className="heading-md">{project.location}</h3>
+                  <p className="body-copy mt-4">{project.intro}</p>
                   <Link
-                    href={project.href}
+                    href={projectPath(project)}
                     className="mt-6 inline-flex text-sm font-bold text-[var(--color-accent-dark)]"
                   >
                     Läs mer om projektet

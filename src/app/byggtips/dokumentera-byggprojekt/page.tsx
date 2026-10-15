@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Dokumentera byggprojekt: vad bör du spara? | Törnros Bygg",
   description: "En praktisk guide till underlag före, under och efter ett byggprojekt: offert, ritningar, foton, ändringar och överlämning.",
-  alternates: { canonical: "/byggtips/dokumentera-byggprojekt/" },
+  alternates: { canonical: "/byggtips/dokumentera-byggprojekt" },
 };
 
 export default function DocumentYourBuildingProjectGuide() {

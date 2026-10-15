@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Dränering i Solna & Stockholm | Törnros Bygg",
   description:
     "Dränering runt husgrunder i Solna och Stockholmsområdet. Läs om platsbesök, förutsättningar, arbetets omfattning och återställning.",
-  alternates: { canonical: "/tjanster/dranering/" },
+  alternates: { canonical: "/tjanster/dranering" },
 };
 
 const topics = [
