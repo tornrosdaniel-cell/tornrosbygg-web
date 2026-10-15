@@ -8,6 +8,7 @@ const footerGroups = [
       { label: "Projekt", href: "/projekt" },
       { label: "Byggtips", href: "/byggtips" },
       { label: "Om oss", href: "/om-oss" },
+      { label: "Integritet", href: "/integritet" },
     ],
   },
   {

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ContactForm } from "@/components/contact-form";
 
 export const metadata: Metadata = {
   title: "Kontakt | Törnros Bygg",
@@ -17,7 +18,14 @@ export default function KontaktPage() {
         </div>
       </section>
       <section className="section border-y border-[var(--color-border)] bg-[var(--color-surface)]">
-        <div className="container grid gap-10 lg:grid-cols-2">
+        <div className="container grid gap-10 lg:grid-cols-[1.2fr_0.8fr]">
+          <div className="surface p-8 md:p-12">
+            <p className="eyebrow mb-4">Förfrågan</p>
+            <h2 className="heading-lg">Skicka en projektbeskrivning</h2>
+            <p className="body-copy mt-6 mb-8">Fyll i det du vet i dag. Namn, e-post och projektbeskrivning behövs för att vi ska kunna återkomma.</p>
+            <ContactForm />
+          </div>
+          <div className="grid gap-6">
           <div className="surface p-8 md:p-12">
             <p className="eyebrow mb-4">Skriv till oss</p>
             <h2 className="heading-lg">Skicka ett mejl</h2>
@@ -29,6 +37,7 @@ export default function KontaktPage() {
             <h2 className="heading-lg">Prata om ditt projekt</h2>
             <p className="body-copy mt-6">Ett samtal är ett enkelt sätt att börja reda ut omfattning, förutsättningar och nästa steg.</p>
             <a className="mt-8 inline-block text-xl font-bold text-[var(--color-accent-dark)] underline" href="tel:+46735224488">0735-224488</a>
+          </div>
           </div>
         </div>
       </section>

@@ -11,6 +11,7 @@ const routes = [
   "/tjanster/markarbeten/",
   "/tjanster/dranering/",
   "/kontakt/",
+  "/integritet/",
   "/om-oss/",
   "/fastighetsagare/",
   "/byggtips/",
