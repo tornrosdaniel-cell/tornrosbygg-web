@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { ChdImageGallery } from "@/components/chd-image-gallery";
+import { chdRoomImages } from "@/content/chd-images";
 import { getPublishedProjects, projectPath } from "@/content/projects";
+import styles from "./projects.module.css";
 
 export const metadata: Metadata = {
   title: "Byggprojekt i Solna & Stockholm | Törnros Bygg",
@@ -13,10 +16,14 @@ const projects = getPublishedProjects();
 
 export default function ProjectsPage() {
   return (
-    <main>
-      <section className="container page-intro"><div className="max-w-4xl"><p className="eyebrow mb-6">Projekt</p><h1 className="heading-xl">Utvalda byggprojekt</h1><p className="body-lg mt-8 max-w-3xl">Renovering, badrum, tillbyggnad, nybyggnation och markarbete ser olika ut i praktiken. Här är exempel från uppdrag i Stockholmsområdet.</p></div></section>
-      <section className="section border-y border-[var(--color-border)] bg-[var(--color-surface)]"><div className="container grid gap-8 md:grid-cols-2 lg:grid-cols-3">{projects.map((project) => <article key={projectPath(project)} className="surface overflow-hidden"><Link href={projectPath(project)} className="block"><Image src={project.hero.src} alt={project.hero.alt} width={project.hero.width} height={project.hero.height} sizes="(min-width: 1244px) 372px, (min-width: 1024px) calc((100vw - 128px) / 3), (min-width: 768px) calc((100vw - 96px) / 2), calc(100vw - 32px)" className="aspect-[4/3] w-full object-cover" /><div className="p-7"><p className="eyebrow mb-4">{project.location}</p><h2 className="heading-md">{project.title}</h2><p className="body-copy mt-4">{project.intro}</p><span className="mt-6 inline-block text-sm font-bold text-[var(--color-accent-dark)]">Läs om projektet</span></div></Link></article>)}</div></section>
-      <section className="section"><div className="container grid gap-10 lg:grid-cols-2"><div><p className="eyebrow mb-4">Ditt projekt</p><h2 className="heading-lg">Vad vill du göra?</h2></div><div><p className="body-lg">Beskriv dina planer och vilka förutsättningar som finns, så kan vi prata om ett upplägg för just ditt projekt.</p><Link href="/kontakt" className="button button-primary mt-8">Berätta om ditt projekt</Link></div></div></section>
+    <main className={styles.projects}>
+      <section className={styles.intro}><div className="container"><p className={styles.kicker}>Custom Home Design & Build</p><h1 className={styles.title}>Personliga miljöer.<br /><em>Genomtänkta helheter.</em></h1><p>Från rum med en egen karaktär till hela hem. Vi förenar design, material och genomförande i Storstockholmsområdet.</p><Link href="/tjanster/nybyggnation" className={styles.link}>Utforska Custom Homes ↗</Link></div></section>
+      <ChdImageGallery id="selected-environments" title="Rum med ett eget uttryck" intro="Plats för det som gör hemmet personligt. Från bergets råa yta till ett rum för stora upplevelser." items={[
+        { image: chdRoomImages.wine, title: "Vinkällare med berget som fond" },
+        { image: chdRoomImages.cinema, title: "En egen biograf" },
+      ]} />
+      <section className={styles.archive}><div className="container"><div className={styles.archiveHeading}><p className={styles.kicker}>Utvalda uppdrag</p><h2>Helheter och enskilda förändringar.</h2><p>Renovering, badrum, tillbyggnad, nybyggnation och markarbete i Storstockholmsområdet. Utforska arbetets omfattning och detaljer.</p></div><div className={styles.grid}>{projects.map((project) => <article key={projectPath(project)} className={styles.card}><Link href={projectPath(project)}><Image src={project.hero.src} alt={project.hero.alt} width={project.hero.width} height={project.hero.height} sizes="(min-width: 1244px) 574px, (min-width: 768px) 46vw, calc(100vw - 32px)" className={styles.image} /><div className={styles.copy}><p className={styles.kicker}>{project.category} · {project.location}</p><h3>{project.title}</h3><p>{project.intro}</p><span className={styles.link}>Utforska uppdraget ↗</span></div></Link></article>)}</div></div></section>
+      <section className={styles.contact}><div className="container"><p className={styles.kicker}>Ditt projekt</p><h2>Vad vill du skapa?</h2><p>Ett helt hem eller en avgränsad förändring. Berätta om dina planer, så börjar vi där.</p><Link href="/kontakt" className={styles.link}>Berätta om ditt projekt ↗</Link><Link href="/tjanster" className={styles.link}>Se alla våra tjänster ↗</Link></div></section>
     </main>
   );
 }

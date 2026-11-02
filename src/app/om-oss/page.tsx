@@ -30,7 +30,7 @@ export default function AboutPage() {
         <div className="max-w-4xl">
           <p className="eyebrow mb-6">Om oss</p>
           <h1 className="heading-xl">Människorna bakom Törnros Bygg</h1>
-          <p className="body-lg mt-8 max-w-3xl">Törnros Bygg drivs av Daniel Törnros med utgångspunkt i Solna. Vi arbetar med renovering, tillbyggnad, nybyggnation och markarbeten i Stockholmsområdet.</p>
+          <p className="body-lg mt-8 max-w-3xl">Törnros Bygg drivs av Daniel Törnros. Vi arbetar med renovering, tillbyggnad, nybyggnation och markarbeten i Storstockholmsområdet.</p>
         </div>
       </section>
 
@@ -48,7 +48,7 @@ export default function AboutPage() {
         <div className="container grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div><p className="eyebrow mb-4">Det vi bygger</p><h2 className="heading-lg">Verkliga projekt, olika förutsättningar</h2></div>
           <div>
-            <p className="body-lg">På Nämndemansgatan i Solna finns en renovering om cirka 140 kvm med flera rum, kök och badrum. På Sjövägen i Solna har vi arbetat med en tillbyggnad med nya ytor, terrass och garage. På Blanchevägen i Danderyd finns ett nybyggnationsprojekt.</p>
+            <p className="body-lg">Våra projekt omfattar renovering av bostäder med kök och badrum, tillbyggnad med nya ytor, terrass och garage samt nybyggnation från grunden.</p>
             <p className="body-copy mt-6">Det är olika typer av uppdrag, men i alla behöver det som ska göras hänga ihop med platsen, underlagen och beställarens behov.</p>
             <Link href="/projekt/" className="button button-secondary mt-8">Se våra projekt</Link>
           </div>

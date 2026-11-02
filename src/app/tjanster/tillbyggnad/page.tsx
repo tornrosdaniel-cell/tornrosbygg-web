@@ -81,12 +81,12 @@ export default function ExtensionPage() {
         <div>
           <p className="eyebrow mb-6">Tillbyggnad</p>
           <h1 className="heading-service">
-            Tillbyggnad i Solna & Stockholm
+            Tillbyggnad i Storstockholmsområdet
           </h1>
           <p className="body-lg mt-8">
             Mer plats hemma börjar med att förstå huset som redan finns.
             Törnros Bygg hjälper dig att planera och genomföra tillbyggnader
-            i Solna och Stockholmsområdet, från de första praktiska frågorna
+            i Storstockholmsområdet, från de första praktiska frågorna
             till färdiga ytor.
           </p>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
@@ -102,7 +102,7 @@ export default function ExtensionPage() {
           <div className="hero-image">
             <Image
               src="/images/projects/sjovagen/tillbyggnad-solna.jpeg"
-              alt="Färdig tillbyggnad med terrass på Sjövägen i Solna"
+              alt="Färdig tillbyggnad med terrass på Tillbyggnad"
               fill
               priority
               sizes="(min-width: 1244px) 566px, (min-width: 1024px) calc((100vw - 112px) / 2), (min-width: 768px) calc(100vw - 64px), calc(100vw - 32px)"
@@ -110,7 +110,7 @@ export default function ExtensionPage() {
             />
           </div>
           <figcaption className="border-t border-[var(--color-border)] bg-[var(--color-surface)] p-5 text-sm font-semibold text-[var(--color-muted)]">
-            Tillbyggnad · Sjövägen, Solna
+            Tillbyggnad
           </figcaption>
         </figure>
       </section>
@@ -182,12 +182,12 @@ export default function ExtensionPage() {
       <section className="section">
         <div className="container grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
-            <p className="eyebrow mb-4">Sjövägen i Solna</p>
+            <p className="eyebrow mb-4">Tillbyggnad</p>
             <h2 className="heading-lg">En tillbyggnad att utgå från</h2>
           </div>
           <div>
             <p className="body-lg">
-              På Sjövägen i Solna har vi arbetat med en tillbyggnad med nya
+              Vi har arbetat med en tillbyggnad med nya
               ytor och terrass i anslutning till huset. Projektet ger ett
               konkret exempel på hur ny yta kan samspela med ett befintligt hus.
             </p>
@@ -201,11 +201,10 @@ export default function ExtensionPage() {
 
       <section className="border-y border-[var(--color-border)] bg-[var(--color-surface)] py-16 md:py-20">
         <div className="container max-w-4xl">
-          <p className="eyebrow mb-4">Solna & Stockholm</p>
-          <h2 className="heading-lg">Tillbyggnader med utgångspunkt i Solna</h2>
+          <p className="eyebrow mb-4">Storstockholmsområdet</p>
+          <h2 className="heading-lg">Tillbyggnader i Storstockholmsområdet</h2>
           <p className="body-lg mt-6">
-            Törnros Bygg utgår från Solna och arbetar med tillbyggnader i
-            Stockholmsområdet. Närhet till projektet underlättar avstämningar
+            Törnros Bygg arbetar med tillbyggnader i Storstockholmsområdet. Närhet till projektet underlättar avstämningar
             när befintligt hus och ny byggdel ska mötas.
           </p>
         </div>

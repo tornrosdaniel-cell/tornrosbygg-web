@@ -3,15 +3,15 @@
 @layer base {
   :root {
     color-scheme: light;
-    --color-ink: #1b1a17;
-    --color-muted: #625d55;
+    --color-ink: #202722;
+    --color-muted: #5e665c;
     --color-soft: #8a8378;
-    --color-paper: #f7f4ef;
-    --color-surface: #fffdf8;
-    --color-border: #ddd6ca;
-    --color-accent: #745c38;
-    --color-accent-dark: #4d3c25;
-    --color-accent-soft: #e7dece;
+    --color-paper: #f1f0e9;
+    --color-surface: #fcfaf5;
+    --color-border: #d6dbcf;
+    --color-accent: #697760;
+    --color-accent-dark: #3c4b37;
+    --color-accent-soft: #e1e6da;
     --page-max: 1180px;
     --space-section: clamp(3.5rem, 6vw, 6rem);
     --radius-sm: 2px;
@@ -148,8 +148,9 @@
   }
 
   .heading-xl {
+    font-family: Georgia, "Times New Roman", serif;
     font-size: clamp(2.25rem, 5.4vw, 4.75rem);
-    font-weight: 700;
+    font-weight: 400;
     letter-spacing: 0;
     line-height: 1.05;
     text-wrap: balance;
@@ -157,16 +158,18 @@
   }
 
   .heading-service {
+    font-family: Georgia, "Times New Roman", serif;
     font-size: clamp(1.85rem, 3.2vw, 3.5rem);
-    font-weight: 700;
+    font-weight: 400;
     line-height: 1.08;
     text-wrap: balance;
     overflow-wrap: anywhere;
   }
 
   .heading-lg {
+    font-family: Georgia, "Times New Roman", serif;
     font-size: clamp(1.8rem, 3vw, 2.75rem);
-    font-weight: 700;
+    font-weight: 400;
     letter-spacing: 0;
     line-height: 1.12;
     text-wrap: balance;
@@ -174,8 +177,9 @@
   }
 
   .heading-md {
+    font-family: Georgia, "Times New Roman", serif;
     font-size: clamp(1.3rem, 2vw, 1.75rem);
-    font-weight: 700;
+    font-weight: 400;
     letter-spacing: 0;
     line-height: 1.15;
     overflow-wrap: anywhere;
@@ -236,3 +240,20 @@
     border-radius: var(--radius-md);
   }
 }
+
+.site-header {
+  --color-ink: #f4f2eb;
+  --color-muted: #c5cbbf;
+  --color-surface: #202722;
+  --color-border: #485043;
+  --color-accent-dark: #dce5d4;
+  background: rgba(27, 32, 30, .97);
+}
+.brand-mark { font-family: Georgia, "Times New Roman", serif; letter-spacing: -.025em; }
+.site-header .button { border-radius: 0; font-size: .75rem; font-weight: 500; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0s !important; }
+}
+
+/* CHD Sprint 2: strengthen the existing wordmark without a new logo. */
+.site-header .brand-mark { font-size: clamp(1.45rem, 2.1vw, 1.9rem); font-weight: 500; letter-spacing: -.045em; line-height: 1.1; }

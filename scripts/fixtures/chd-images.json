@@ -1,0 +1,95 @@
+{
+  "images": [
+    {
+      "key": "home",
+      "asset": "/images/chd/final/timber-home-final.webp",
+      "width": 1448,
+      "height": 1086,
+      "publicationSha256": "edfe2b78efa75baa5aa144cd253d96e21567665139dd41b8cfdba10f4f89e641"
+    },
+    {
+      "key": "custom",
+      "asset": "/images/chd/final/living-fireplace-final.webp",
+      "width": 1448,
+      "height": 1086,
+      "publicationSha256": "cfc2a8589972fb1408cb4b7c0d37e5c48ead1f8c15baac85ab04dcf3b92a1807"
+    },
+    {
+      "key": "discretion",
+      "asset": "/images/chd/final/great-hall-concept.webp",
+      "width": 1448,
+      "height": 1086,
+      "publicationSha256": "e3444a15f647bb1ed922cbc7db5a08c01d770e9165d908723965412266c613e3"
+    },
+    {
+      "key": "exterior",
+      "asset": "/images/chd/final/house-architecture-final.webp",
+      "width": 1086,
+      "height": 1448,
+      "publicationSha256": "5fab7222afee7f76ee3cc58527fff0d1d7f3725dda1de412ed83acbf088dcc38"
+    },
+    {
+      "key": "kitchen",
+      "asset": "/images/chd/final/kitchen-concept.webp",
+      "width": 1448,
+      "height": 1086,
+      "publicationSha256": "a4ea0bfc5d719cab233fd49704598e668047bd087035e2139bdaf8a909657d7d"
+    },
+    {
+      "key": "bedroom",
+      "asset": "/images/chd/final/bedroom-concept.webp",
+      "width": 1448,
+      "height": 1086,
+      "publicationSha256": "3d10b67b527872dd4f67a8fc8b1f518ae437f1730dd65d3d5067fef6dc5e04fd"
+    },
+    {
+      "key": "wine",
+      "asset": "/images/chd/final/wine-cellar-concept.webp",
+      "width": 1600,
+      "height": 883,
+      "publicationSha256": "750a5ab1de6479adb2f911f86330c14c1d5fdcae50694fcb6074aaa9c33f5ac3"
+    },
+    {
+      "key": "cinema",
+      "asset": "/images/chd/final/home-cinema-concept.webp",
+      "width": 1600,
+      "height": 850,
+      "publicationSha256": "2fbd0372c4235a5ebb9d14b7dc7147e519b9649f5b54f01289ddd1f58d416e54"
+    },
+    {
+      "key": "terrazzo",
+      "asset": "/images/chd/final/terrazzo-bath-final.webp",
+      "width": 1448,
+      "height": 1086,
+      "publicationSha256": "0155e3c79f76b7854c0bc13bbcfcc0356965bde5dc84726055b1995d18f7ecaa"
+    },
+    {
+      "key": "services",
+      "asset": "/images/chd/final/terrazzo-detail-final.webp",
+      "width": 1448,
+      "height": 1086,
+      "publicationSha256": "901f2ccd98ad1751b633a6e5aa43935c8e290bf5da3925a8c46fde53f6a09407"
+    },
+    {
+      "key": "stone",
+      "asset": "/images/chd/final/stone-bath-final.webp",
+      "width": 1448,
+      "height": 1086,
+      "publicationSha256": "02d7d8efd214dfa162a8ab612a162aa1202f4571aa213d98f04771942b601435"
+    },
+    {
+      "key": "joinery",
+      "asset": "/images/chd/final/arched-joinery-final.webp",
+      "width": 1448,
+      "height": 1086,
+      "publicationSha256": "ec2a60e874d2fcc23bf3624f93c171b73f72665038c98ebaff3ebf9b44da18cc"
+    },
+    {
+      "key": "garden",
+      "asset": "/images/chd/final/terraced-garden-final.webp",
+      "width": 1448,
+      "height": 1086,
+      "publicationSha256": "0266e3679d9a513faa9c13d311a8181ddcc1631f84c95ac2904836fc39d97209"
+    }
+  ]
+}

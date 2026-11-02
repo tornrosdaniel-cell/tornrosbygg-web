@@ -95,7 +95,7 @@ export default function AttefallshusPage() {
         <div>
           <p className="eyebrow mb-6">Attefallshus & komplementbyggnader</p>
           <h1 className="heading-service">
-            Attefallshus i Solna & Stockholm
+            Attefallshus i Storstockholmsområdet
           </h1>
           <p className="body-lg mt-8">
             En extra byggnad på tomten kan ge plats åt något som saknas i
@@ -192,11 +192,10 @@ export default function AttefallshusPage() {
 
       <section className="border-y border-[var(--color-border)] bg-[var(--color-surface)] py-16 md:py-20">
         <div className="container max-w-4xl">
-          <p className="eyebrow mb-4">Solna & Stockholm</p>
-          <h2 className="heading-lg">Komplementbyggnader med utgångspunkt i Solna</h2>
+          <p className="eyebrow mb-4">Storstockholmsområdet</p>
+          <h2 className="heading-lg">Komplementbyggnader i Storstockholmsområdet</h2>
           <p className="body-lg mt-6">
-            Törnros Bygg utgår från Solna och arbetar med byggprojekt i
-            Stockholmsområdet. För en fristående byggnad börjar vi med
+            Törnros Bygg arbetar med byggprojekt i Storstockholmsområdet. För en fristående byggnad börjar vi med
             platsens förutsättningar och det du vill använda byggnaden till.
           </p>
         </div>

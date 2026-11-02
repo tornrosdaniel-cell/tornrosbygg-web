@@ -22,7 +22,7 @@ export default function FastighetsagarePage() {
           <h1 className="heading-xl">Byggprojekt för fastighetsägare & BRF</h1>
           <p className="body-lg mt-6 max-w-3xl">
             Törnros Bygg utför renovering, ombyggnad och entreprenad för
-            fastighetsägare och bostadsrättsföreningar i Solna och Stockholm.
+            fastighetsägare och bostadsrättsföreningar i Storstockholmsområdet.
             Vi planerar och samordnar byggarbetet utifrån fastigheten,
             tillträdet och dem som använder den.
           </p>

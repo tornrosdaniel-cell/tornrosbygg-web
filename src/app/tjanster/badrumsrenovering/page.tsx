@@ -1,3 +1,5 @@
+import { ChdImageGallery } from "@/components/chd-image-gallery";
+import { chdImages } from "@/content/chd-images";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -88,12 +90,12 @@ export default function BathroomRenovationPage() {
         <div>
           <p className="eyebrow mb-6">Badrumsrenovering</p>
           <h1 className="heading-service">
-            Badrumsrenovering i Solna & Stockholm
+            Badrumsrenovering i Storstockholmsområdet
           </h1>
           <p className="body-lg mt-8">
             Ett badrum ska fungera i vardagen och byggas utifrån rummets
             förutsättningar. Törnros Bygg hjälper dig att planera och genomföra
-            badrumsrenoveringar i Solna och Stockholmsområdet, med tydlig
+            badrumsrenoveringar i Storstockholmsområdet, med tydlig
             omfattning och avstämningar längs vägen.
           </p>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
@@ -108,8 +110,8 @@ export default function BathroomRenovationPage() {
         <figure className="surface overflow-hidden">
           <div className="hero-image">
             <Image
-              src="/images/projects/frejgatan/badrum-frejgatan.webp"
-              alt="Badrum på Frejgatan under slutmontering, med nischer och duschvägg"
+              src={chdImages.terrazzo.src}
+              alt={chdImages.terrazzo.alt}
               fill
               priority
               quality={75}
@@ -117,9 +119,7 @@ export default function BathroomRenovationPage() {
               className="object-cover"
             />
           </div>
-          <figcaption className="border-t border-[var(--color-border)] bg-[var(--color-surface)] p-5 text-sm font-semibold text-[var(--color-muted)]">
-            Badrumsrenovering under slutmontering · Frejgatan, Stockholm
-          </figcaption>
+          <figcaption className="border-t border-[var(--color-border)] bg-[var(--color-surface)] p-5 text-sm font-semibold text-[var(--color-muted)]">Material, ljus och ett personligt badrum</figcaption>
         </figure>
       </section>
 
@@ -216,11 +216,10 @@ export default function BathroomRenovationPage() {
 
       <section className="border-y border-[var(--color-border)] bg-[var(--color-surface)] py-16 md:py-20">
         <div className="container max-w-4xl">
-          <p className="eyebrow mb-4">Solna & Stockholm</p>
-          <h2 className="heading-lg">Badrumsprojekt med utgångspunkt i Solna</h2>
+          <p className="eyebrow mb-4">Storstockholmsområdet</p>
+          <h2 className="heading-lg">Badrumsprojekt i Storstockholmsområdet</h2>
           <p className="body-lg mt-6">
-            Törnros Bygg utgår från Solna och arbetar med badrumsprojekt i
-            Stockholmsområdet. Närheten gör det lättare att stämma av frågor
+            Törnros Bygg arbetar med badrumsprojekt i Storstockholmsområdet. Närheten gör det lättare att stämma av frågor
             om planering, material och utförande under arbetets gång.
           </p>
         </div>
@@ -263,6 +262,7 @@ export default function BathroomRenovationPage() {
           </div>
         </div>
       </section>
+      <ChdImageGallery id="bathroom-inspiration" title="Badrum med egen karaktär" intro="Terrazzo, stenkaraktär och ljus. Materialval som ger badrummet en sammanhållen karaktär." items={[{ image: chdImages.services, title: "Materialet i fokus" }, { image: chdImages.stone, title: "Stenkaraktär, glas och svarta detaljer" }]} />
     </main>
   );
 }

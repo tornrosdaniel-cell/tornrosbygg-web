@@ -14,7 +14,7 @@ export default function KontaktPage() {
         <div className="max-w-4xl">
           <p className="eyebrow mb-6">Kontakt</p>
           <h1 className="heading-xl">Berätta om ditt byggprojekt</h1>
-          <p className="body-lg mt-8 max-w-3xl">Ska du renovera, bygga till eller planera något nytt? Hör av dig och beskriv vad du vill göra. Vi utgår från Solna och arbetar i Stockholmsområdet.</p>
+          <p className="body-lg mt-8 max-w-3xl">Ska du renovera, bygga till eller planera något nytt? Hör av dig och beskriv vad du vill göra. Vi arbetar i Storstockholmsområdet.</p>
         </div>
       </section>
       <section className="section border-y border-[var(--color-border)] bg-[var(--color-surface)]">

@@ -1,3 +1,6 @@
+import { chdImages } from "@/content/chd-images";
+import { ChdImageGallery } from "@/components/chd-image-gallery";
+import { chdRoomImages } from "@/content/chd-images";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -81,12 +84,12 @@ export default function NewConstructionPage() {
         <div>
           <p className="eyebrow mb-6">Nybyggnation</p>
           <h1 className="heading-service">
-            Nybyggnation i Solna & Stockholm
+            Nybyggnation i Storstockholmsområdet
           </h1>
           <p className="body-lg mt-8">
             Ett nytt hus börjar långt före det första byggmomentet. Tomt,
             underlag, omfattning och beslut behöver hänga ihop. Törnros Bygg
-            arbetar med nybyggnationsprojekt i Solna och Stockholmsområdet
+            arbetar med nybyggnationsprojekt i Storstockholmsområdet
             och hjälper dig att ta projektet från planering till utförande.
           </p>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
@@ -101,17 +104,15 @@ export default function NewConstructionPage() {
         <figure className="surface overflow-hidden">
           <div className="hero-image">
             <Image
-              src="/images/projects/blanchevagen/nybyggnation-allrum-danderyd.jpeg"
-              alt="Ljust allrum i nybyggnation på Blanchevägen i Danderyd"
+              src={chdImages.home.src}
+              alt={chdImages.home.alt}
               fill
               priority
               sizes="(min-width: 1244px) 566px, (min-width: 1024px) calc((100vw - 112px) / 2), (min-width: 768px) calc(100vw - 64px), calc(100vw - 32px)"
               className="object-cover"
             />
           </div>
-          <figcaption className="border-t border-[var(--color-border)] bg-[var(--color-surface)] p-5 text-sm font-semibold text-[var(--color-muted)]">
-            Nybyggnation · Blanchevägen, Danderyd
-          </figcaption>
+          <figcaption className="border-t border-[var(--color-border)] bg-[var(--color-surface)] p-5 text-sm font-semibold text-[var(--color-muted)]">Personliga hem från idé till genomförande</figcaption>
         </figure>
       </section>
 
@@ -182,15 +183,15 @@ export default function NewConstructionPage() {
       <section className="section">
         <div className="container grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
-            <p className="eyebrow mb-4">Blanchevägen i Danderyd</p>
+            <p className="eyebrow mb-4">Nybyggnation</p>
             <h2 className="heading-lg">Ett ljust allrum</h2>
           </div>
           <div>
             <p className="body-lg">
-              Allrummet på Blanchevägen är en del av ett nybyggnationsprojekt
+              Allrummet är en del av ett nybyggnationsprojekt
               där markarbete och husets färdigställande hörde ihop. De stora
               glaspartierna och takfönstren visar hur ljus och planering
-              påverkar upplevelsen av den färdiga ytan.
+              påverkar upplevelsen av rummet.
             </p>
             <p className="body-copy mt-6">
               Varje nybyggnation har sina egna förutsättningar. Vi börjar med
@@ -202,11 +203,10 @@ export default function NewConstructionPage() {
 
       <section className="border-y border-[var(--color-border)] bg-[var(--color-surface)] py-16 md:py-20">
         <div className="container max-w-4xl">
-          <p className="eyebrow mb-4">Solna & Stockholm</p>
-          <h2 className="heading-lg">Nybyggnation med utgångspunkt i Solna</h2>
+          <p className="eyebrow mb-4">Storstockholmsområdet</p>
+          <h2 className="heading-lg">Nybyggnation i Storstockholmsområdet</h2>
           <p className="body-lg mt-6">
-            Törnros Bygg utgår från Solna och arbetar med byggprojekt i
-            Stockholmsområdet. Närhet till platsen gör det enklare att
+            Törnros Bygg arbetar med byggprojekt i Storstockholmsområdet. Närhet till platsen gör det enklare att
             följa arbetet och stämma av beslut under projektets gång.
           </p>
         </div>
@@ -248,6 +248,7 @@ export default function NewConstructionPage() {
           </div>
         </div>
       </section>
+      <ChdImageGallery id="custom-home-rooms" title="Rum för ditt sätt att leva" intro="Rum för vila, umgänge och upplevelser. Material och ljus ger varje del av hemmet sin egen karaktär." items={[{ image: chdRoomImages.bedroom, title: "En lugn plats att landa" }, { image: chdRoomImages.wine, title: "Berg, trä och en plats att mötas" }, { image: chdRoomImages.cinema, title: "Ett rum för upplevelser" }]} />
     </main>
   );
 }

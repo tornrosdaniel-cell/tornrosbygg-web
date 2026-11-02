@@ -58,11 +58,10 @@ export default function ServicesPage() {
       <section className="container page-intro">
         <div className="max-w-4xl">
           <p className="eyebrow mb-6">Tjänster</p>
-          <h1 className="heading-xl">Byggtjänster i Solna & Stockholm</h1>
+          <h1 className="heading-xl">Byggtjänster i Storstockholmsområdet</h1>
           <p className="body-lg mt-8 max-w-3xl">
             Törnros Bygg hjälper privatpersoner, bostadsrättsföreningar och
-            fastighetsägare med både mindre och större byggprojekt i Solna och
-            Stockholmsområdet. Uppdragen kan handla om en avgränsad del av en
+            fastighetsägare med både mindre och större byggprojekt i Storstockholmsområdet. Uppdragen kan handla om en avgränsad del av en
             bostad, en större renovering eller byggarbeten där flera moment
             behöver planeras och samordnas.
           </p>

@@ -1,3 +1,5 @@
+import { ChdImageGallery } from "@/components/chd-image-gallery";
+import { chdImages } from "@/content/chd-images";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -62,7 +64,7 @@ export default function MarkarbetenPage() {
       <section className="container service-hero">
         <div>
           <p className="eyebrow mb-6">Mark & grundförberedelser</p>
-          <h1 className="heading-service">Markarbeten i Solna & Stockholm</h1>
+          <h1 className="heading-service">Markarbeten i Storstockholmsområdet</h1>
           <p className="body-lg mt-8">Ett genomtänkt markarbete börjar med platsen. Törnros Bygg hjälper till med markarbeten inför byggnation och runt befintliga hus, med hänsyn till åtkomst, markförhållanden och det som ska göras ovanför mark.</p>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
             <Link href="/kontakt" className="button button-primary">Berätta om ditt markprojekt</Link>
@@ -91,13 +93,14 @@ export default function MarkarbetenPage() {
 
       <section className="section bg-[var(--color-ink)] text-[var(--color-surface)]"><div className="container"><div className="max-w-3xl"><p className="eyebrow mb-4 !text-[var(--color-accent-soft)]">Arbetsgång</p><h2 className="heading-lg">Från platsbesök till färdig mark</h2><p className="mt-6 max-w-2xl leading-8 text-stone-300">Upplägget anpassas till platsen och den omfattning vi kommer överens om.</p></div><div className="mt-12 grid gap-6 lg:grid-cols-4">{steps.map((item) => <article key={item.number} className="rounded-[var(--radius-md)] border border-white/15 bg-white/5 p-6"><p className="text-sm font-bold text-[var(--color-accent-soft)]">{item.number}</p><h3 className="mt-5 text-xl font-bold">{item.title}</h3><p className="mt-4 leading-7 text-stone-300">{item.text}</p></article>)}</div></div></section>
 
-      <section className="border-y border-[var(--color-border)] bg-[var(--color-surface)] py-16 md:py-20"><div className="container max-w-4xl"><p className="eyebrow mb-4">Solna & Stockholm</p><h2 className="heading-lg">Markarbeten med utgångspunkt i Solna</h2><p className="body-lg mt-6">Törnros Bygg utgår från Solna och arbetar med byggprojekt i Stockholmsområdet. För markarbeten börjar vi med att förstå platsen, åtkomsten och hur den färdiga ytan ska användas.</p></div></section>
+      <section className="border-y border-[var(--color-border)] bg-[var(--color-surface)] py-16 md:py-20"><div className="container max-w-4xl"><p className="eyebrow mb-4">Storstockholmsområdet</p><h2 className="heading-lg">Markarbeten i Storstockholmsområdet</h2><p className="body-lg mt-6">Törnros Bygg arbetar med byggprojekt i Storstockholmsområdet. För markarbeten börjar vi med att förstå platsen, åtkomsten och hur den färdiga ytan ska användas.</p></div></section>
 
       <section className="section"><div className="container"><div className="max-w-3xl"><p className="eyebrow mb-4">Frågor</p><h2 className="heading-lg">Vanliga frågor om markarbeten</h2></div><div className="mt-10 divide-y divide-[var(--color-border)] border-y border-[var(--color-border)]">{faqs.map((item) => <details key={item.question} className="group py-6"><summary className="flex items-center justify-between gap-6 text-left text-xl font-bold">{item.question}<span className="text-2xl text-[var(--color-accent-dark)] group-open:rotate-45">+</span></summary><p className="body-copy mt-4 max-w-3xl">{item.answer}</p></details>)}</div></div></section>
 
       <section className="section pt-0"><div className="container"><div className="surface grid gap-8 p-8 md:p-12 lg:grid-cols-[1fr_auto] lg:items-center"><div><h2 className="heading-lg">Vad vill du göra med marken?</h2><p className="body-lg mt-5 max-w-2xl">Beskriv platsen och vad du vill bygga eller förändra. Har du ritningar eller andra underlag får du gärna ta med dem när vi pratar om nästa steg.</p></div><Link href="/kontakt" className="button button-primary">Berätta om ditt projekt</Link></div></div></section>
 
-      <section id="pool-och-utemiljo" className="section scroll-mt-28"><div className="container grid gap-10 lg:grid-cols-2"><div><p className="eyebrow mb-4">Tomt och utemiljö</p><h2 className="heading-lg">Poolbyggen och utemiljö</h2></div><div><p className="body-lg">Vi arbetar med poolbyggen och utemiljöer där pool, trädäck, marknivåer och ytor för umgänge behöver fungera tillsammans. Omfattningen bestäms utifrån tomten och den poollösning som väljs.</p><p className="body-copy mt-6">På Sjövägen i Solna finns ett dokumenterat poolprojekt med trädäck och planering för sittgrupp och utekök.</p><Link href="/projekt/poolbygge-sjovagen-solna" className="button button-secondary mt-8">Se poolprojektet på Sjövägen</Link><Link href="/kontakt" className="mt-6 block font-bold text-[var(--color-accent-dark)] underline">Berätta om din utemiljö</Link></div></div></section>
+      <section id="pool-och-utemiljo" className="section scroll-mt-28"><div className="container grid gap-10 lg:grid-cols-2"><div><p className="eyebrow mb-4">Tomt och utemiljö</p><h2 className="heading-lg">Poolbyggen och utemiljö</h2></div><div><p className="body-lg">Vi arbetar med poolbyggen och utemiljöer där pool, trädäck, marknivåer och ytor för umgänge behöver fungera tillsammans. Omfattningen bestäms utifrån tomten och den poollösning som väljs.</p><p className="body-copy mt-6">Vårt dokumenterade poolprojekt omfattar trädäck och planering för sittgrupp och utekök.</p><Link href="/projekt/poolbygge-sjovagen-solna" className="button button-secondary mt-8">Se vårt poolprojekt</Link><Link href="/kontakt" className="mt-6 block font-bold text-[var(--color-accent-dark)] underline">Berätta om din utemiljö</Link></div></div></section>
+      <ChdImageGallery id="garden-inspiration" title="Rum för utemiljön" intro="Trätrappor och naturstensmurar binder samman nivåerna. Ett genomtänkt möte mellan huset och trädgården." items={[{ image: chdImages.garden, title: "Trä, sten och nivåer" }]} />
     </main>
   );
 }

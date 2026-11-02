@@ -22,7 +22,7 @@ export function ProjectDetail({ project }: { project: Project }) {
           <p className="body-lg mt-8 max-w-3xl">{project.intro}</p>
         </div>
         <figure className="surface mt-8 overflow-hidden">
-          <Image src={project.hero.src} alt={project.hero.alt} width={project.hero.width} height={project.hero.height} sizes="(min-width: 1244px) 1180px, (min-width: 768px) calc(100vw - 64px), calc(100vw - 32px)" className="h-auto w-full" priority />
+          <Image src={project.hero.src} alt={project.hero.alt} width={project.hero.width} height={project.hero.height} sizes="(min-width: 1244px) 1180px, (min-width: 768px) calc(100vw - 64px), calc(100vw - 32px)" className="h-auto max-h-[75svh] w-full bg-[var(--color-ink)] object-contain" preload />
           <Caption image={project.hero} />
         </figure>
       </section>

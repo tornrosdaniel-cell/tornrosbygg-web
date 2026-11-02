@@ -139,9 +139,9 @@ test("approved gallery selection is published once, with verified files and no r
     for (const image of group.selected.filter((image) => image.usage === "gallery")) {
       const file = readFileSync(join(root, "public", image.publicationAsset.slice(1)));
       assert.equal(createHash("sha256").update(file).digest("hex"), image.publicationSha256);
-      const owners = data.getPublishedProjects().filter((project) => project.gallery.some((item) => item.src === image.publicationAsset));
+      const owners = data.getPublishedProjects().filter((project) => [project.hero, ...project.gallery].some((item) => item.src === image.publicationAsset));
       assert.equal(owners.length, 1, image.publicationAsset);
-      const published = owners[0].gallery.find((item) => item.src === image.publicationAsset);
+      const published = [owners[0].hero, ...owners[0].gallery].find((item) => item.src === image.publicationAsset);
       assert.equal(published.width, image.publicationWidth);
       assert.equal(published.height, image.publicationHeight);
       assert.equal(published.alt, image.proposedAlt);
@@ -255,6 +255,54 @@ test("every built content page is in sitemap and every project is listed", async
   for (const project of data.getFeaturedProjects()) assert.ok(home.includes(`href="${data.projectPath(project)}"`));
 });
 
+test("CHD home keeps the brief, accessible contact fields and real project images", async () => {
+  const home = await (await fetch(base)).text();
+  for (const value of ["Homes designed", "Från vision till verklighet.", "Custom Homes", "Selected Services", "Vision och behov", "Design och planering", "Projektering och budget", "Byggnation och färdigställande", "Personliga hem förtjänar", "Tell us what"]) assert.ok(home.includes(value), value);
+  for (const id of ["koncept", "process", "projektide"]) assert.ok(home.includes(`id="${id}"`));
+  assert.equal([...home.matchAll(/<form\b/g)].length, 1);
+  for (const field of ["company", "name", "email", "phone", "projectType", "location", "message"]) assert.ok(home.includes(`name="${field}"`), field);
+  assert.ok(home.includes('href="/integritet"'));
+  assert.ok(home.includes('href="/kontakt"'));
+  assert.ok(home.includes('href="mailto:hej@tornrosbygg.se"'));
+  assert.ok(home.includes('href="tel:+46735224488"'));
+  assert.equal([...home.matchAll(/<h1\b/g)].length, 1);
+});
+
+test("public project descriptions and image alternatives omit customer street names", async () => {
+  const streets = /Blanchevägen|Nämndemansgatan|Frejgatan|Sjövägen|Vasastan/iu;
+  const xml = await (await fetch(base + "/sitemap.xml")).text();
+  for (const [, url] of xml.matchAll(/<loc>(.*?)<\/loc>/g)) {
+    const path = new URL(url).pathname;
+    if (path === "/integritet") continue; // Confirmed controller's business address stays unchanged.
+    const html = await (await fetch(base + path)).text();
+    const main = html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/)?.[1] ?? "";
+    const visible = main.replace(/<script\b[\s\S]*?<\/script>/g, "").replace(/<[^>]*>/g, " ");
+    assert.doesNotMatch(visible, streets, path);
+    for (const [, alt] of main.matchAll(/\balt="([^"]*)"/g)) assert.doesNotMatch(alt, streets, path);
+    assert.doesNotMatch(html.match(/<title>(.*?)<\/title>/)?.[1] ?? "", streets, path);
+    assert.doesNotMatch(html.match(/<meta name="description" content="([^"]*)"/)?.[1] ?? "", streets, path);
+  }
+  // Existing slugs/canonicals and legacy image paths intentionally stay covered by migration tests.
+});
+
+test("Sprint 3 home uses approved final assets and each photo once", async () => {
+  const source = load("src/content/chd-images.ts");
+  const presentation = [...Object.values(source.chdImages), ...Object.values(source.chdConceptImages), ...Object.values(source.chdRoomImages)];
+  const html = await (await fetch(base)).text();
+  const main = html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/)[1];
+  const images = [...main.matchAll(/<img\b[^>]*src="([^"]+)"/g)].map(([, src]) => {
+    const url = new URL(src.replaceAll("&amp;", "&"), base);
+    return url.searchParams.get("url") ?? url.pathname;
+  });
+  assert.equal(images.length, 13);
+  assert.equal(new Set(images).size, 13);
+  assert.deepEqual([...images].sort(), presentation.map((image) => image.src).sort());
+  assert.equal(images[0], "/images/chd/final/timber-home-final.webp");
+  assert.deepEqual(images.slice(1, 3), ["/images/chd/final/living-fireplace-final.webp", "/images/chd/final/terrazzo-detail-final.webp"]);
+  assert.ok(html.includes('rel="preload" as="image"'));
+  assert.doesNotMatch(main, /invändigt färdigställande|\/images\/projects\//);
+});
+
 test("new service links reach real sections and removed claims stay absent", async () => {
   const services = await (await fetch(base + "/tjanster")).text();
   for (const [path, id] of [
@@ -270,4 +318,75 @@ test("new service links reach real sections and removed claims stay absent", asy
   const brf = await (await fetch(base + "/fastighetsagare")).text();
   const visibleMain = brf.match(/<main>([\s\S]*?)<\/main>/)[1];
   assert.doesNotMatch(visibleMain, /10 års garanti|AAA-rating|nöjdkundgaranti|certifierad|oberoende besiktningsman|behörig kontrollansvarig|fastighetsskötsel/i);
+});
+
+
+test("CHD final images match approved publication hashes, metadata privacy and responsive dimensions", async () => {
+  const source = load("src/content/chd-images.ts");
+  const images = [...Object.values(source.chdImages), ...Object.values(source.chdConceptImages), ...Object.values(source.chdRoomImages)];
+  const provenance = JSON.parse(readFileSync(join(root, "scripts/fixtures/chd-images.json"), "utf8"));
+  assert.equal(images.length, 13);
+  assert.equal(new Set(images.map(i => i.src)).size, 13);
+  assert.equal(provenance.images.length, 13);
+  for (const image of images) {
+    assert.match(image.src, /^\/images\/chd\/final\/[a-z-]+\.webp$/);
+    assert.doesNotMatch(image.alt, /Munkholmen|Sjövägen|Blanchevägen|Nämndemansgatan|Frejgatan/iu);
+    const bytes = readFileSync(join(root, "public", image.src.slice(1)));
+    const metadata = await sharp(bytes).metadata();
+    assert.equal(metadata.width, image.width);
+    assert.equal(metadata.height, image.height);
+    assert.equal(metadata.exif, undefined);
+    assert.equal(metadata.xmp, undefined);
+    const original = provenance.images.find(item => item.asset === image.src);
+    assert.ok(original);
+    assert.equal(createHash("sha256").update(bytes).digest("hex"), original.publicationSha256);
+    assert.ok(bytes.length < 450_000, image.src);
+    const response = await fetch(base + image.src);
+    assert.equal(response.status, 200, image.src);
+    assert.match(response.headers.get("content-type"), /^image\//);
+  }
+});
+
+test("Sprint 3.1 premium presentation keeps geography, neutral image text and all approved images", async () => {
+  const source = load("src/content/chd-images.ts");
+  const home = await (await fetch(base)).text();
+  for (const image of [source.chdRoomImages.wine, source.chdRoomImages.cinema, source.chdRoomImages.bedroom, source.chdImages.discretion, source.chdConceptImages.kitchen]) assert.ok(home.includes(encodeURIComponent(image.src)), image.src);
+  for (const [route, list] of [
+    ["/tjanster/nybyggnation", Object.values(source.chdRoomImages)],
+    ["/tjanster/badrumsrenovering", [source.chdImages.terrazzo, source.chdImages.services, source.chdImages.stone]],
+    ["/tjanster/renovering", [source.chdImages.joinery]],
+    ["/tjanster/markarbeten", [source.chdImages.garden]],
+    ["/projekt", [source.chdRoomImages.wine, source.chdRoomImages.cinema]],
+  ]) {
+    const html = await (await fetch(base + route)).text();
+    for (const image of list) assert.ok(html.includes(encodeURIComponent(image.src)), route + image.src);
+  }
+  const xml = await (await fetch(base + "/sitemap.xml")).text();
+  for (const [, url] of xml.matchAll(/<loc>(.*?)<\/loc>/g)) {
+    const route = new URL(url).pathname;
+    if (route === "/integritet") continue;
+    const html = await (await fetch(base + route)).text();
+    const main = html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/)?.[1] ?? "";
+    const visible = main.replace(/<script\b[\s\S]*?<\/script>/g, "").replace(/<[^>]*>/g, " ");
+    assert.doesNotMatch(visible, /\bSolna\b|(?<!Stor)Stockholmsområdet|\bStockholm\b|Munkholmen|AI-bearbet|retuscher|visualiser|bearbetade bilder|skilja sig från/iu, route);
+    for (const [, alt] of main.matchAll(/\balt="([^"]*)"/g)) assert.doesNotMatch(alt, /visualiser|bearbetad|retusch|Munkholmen/iu, route);
+  }
+  for (const asset of ["/images/chd/Modern%20Wooden%20House%20with%20Warm%20Wall%20Lights.png", "/images/chd/munkholmen/house-architecture-final.png.png", "/source-assets/chd-sprint-3/Warm%20Sunset%20Luxury%20Bedroom.png"]) assert.equal((await fetch(base + asset, { redirect: "manual" })).status, 404, asset);
+});
+
+
+test("Sprint 3.2 keeps section order, image accessibility and caption-free presentation galleries", async () => {
+  const html = await (await fetch(base)).text();
+  const main = html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/)[1];
+  const sections = [...main.matchAll(/<section\b[^>]*aria-labelledby="([^"]+)"/g)].map(m => m[1]);
+  assert.deepEqual(sections, ["hero-title", "concept-title", "custom-home-environments-title", "vision-title", "process-title", "environment-title", "discretion-title", "contact-title"]);
+  for (const id of ["custom-home-environments", "vision"]) {
+    const section = main.match(new RegExp('<section id="' + id + '"[\\s\\S]*?<\\/section>'))[0];
+    assert.doesNotMatch(section, /<figcaption\b/);
+    for (const [, alt] of section.matchAll(/<img\b[^>]*alt="([^"]*)"/g)) assert.ok(alt.length > 10);
+  }
+  const gallery = main.match(/<section id="custom-home-environments"[\s\S]*?<\/section>/)[0];
+  const wine = gallery.indexOf("wine-cellar-concept.webp"), cinema = gallery.indexOf("home-cinema-concept.webp");
+  assert.ok(wine >= 0 && cinema > wine);
+  assert.doesNotMatch(main, /Träfasad\. Svarta glaspartier\./);
 });

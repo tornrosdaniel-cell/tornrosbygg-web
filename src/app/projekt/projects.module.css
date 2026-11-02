@@ -1,0 +1,18 @@
+.projects { background: #1b201e; color: #f4f2eb; }
+.intro { padding-block: clamp(4rem, 7vw, 7rem) 1rem; }
+.kicker { color: #b9bdb4; font-size: .64rem; letter-spacing: .16em; text-transform: uppercase; line-height: 1.8; }
+.title { margin-top: 1.8rem; font: 400 clamp(2.6rem, 5.5vw, 5rem)/1.1 Georgia, serif; letter-spacing: -.04em; text-wrap: balance; }
+.intro p:not(.kicker), .archiveHeading > p:last-child, .contact p:not(.kicker) { max-width: 55ch; color: #b9bdb4; font-size: .96rem; line-height: 1.9; margin-top: 1.8rem; }
+.link { display: inline-flex; align-items: center; gap: 1rem; min-height: 48px; border-bottom: 1px solid currentColor; margin-top: 1.6rem; margin-right: 2rem; font-size: .8rem; font-weight: 600; }
+.archive { padding-block: clamp(3.5rem, 6vw, 6rem); background: #252b27; }
+.archiveHeading { max-width: 50rem; margin-bottom: 3rem; }
+.archive h2, .contact h2 { font: 400 clamp(2rem, 3.8vw, 3.4rem)/1.15 Georgia, serif; letter-spacing: -.03em; margin-top: 1.3rem; }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 3.5rem 1.8rem; align-items: start; }
+.card { min-width: 0; }
+.image { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+.copy { padding-top: 1.5rem; }
+.copy h3 { font: 400 clamp(1.65rem, 2.5vw, 2.2rem)/1.2 Georgia, serif; margin-top: .65rem; }
+.copy > p:not(.kicker) { font-size: .88rem; line-height: 1.9; color: #b9bdb4; margin-top: 1rem; max-width: 53ch; }
+.copy .link { margin-top: 1rem; }
+.contact { padding-block: clamp(4rem, 7vw, 7rem); }
+@media (max-width: 767px) { .grid { grid-template-columns: 1fr; gap: 3rem; } .copy .kicker { font-size: .6rem; } }

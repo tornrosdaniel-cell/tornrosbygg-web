@@ -2,21 +2,21 @@ import Link from "next/link";
 import { MobileNavigation } from "@/components/mobile-navigation";
 
 const navigation = [
+  { label: "Koncept", href: "/#koncept" },
   { label: "Tjänster", href: "/tjanster" },
-  { label: "Projekt", href: "/projekt" },
-  { label: "För fastighetsägare", href: "/fastighetsagare" },
-  { label: "Byggtips", href: "/byggtips" },
+  { label: "Miljöer", href: "/projekt" },
+  { label: "Vår process", href: "/#process" },
   { label: "Om oss", href: "/om-oss" },
   { label: "Kontakt", href: "/kontakt" },
 ];
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-20 border-b border-[var(--color-border)] bg-[rgba(247,244,239,0.94)] backdrop-blur-sm">
+    <header className="site-header sticky top-0 z-20 border-b border-[var(--color-border)] backdrop-blur-sm">
       <div className="container flex min-h-20 items-center justify-between gap-6">
         <Link
           href="/"
-          className="whitespace-nowrap text-xl font-bold tracking-[0.01em] text-[var(--color-ink)]"
+          className="brand-mark whitespace-nowrap text-xl text-[var(--color-ink)]"
           aria-label="Törnros Bygg startsida"
         >
           Törnros Bygg
@@ -38,7 +38,7 @@ export function SiteHeader() {
           href="/kontakt"
           className="button button-primary hidden whitespace-nowrap xl:inline-flex"
         >
-          Berätta om ditt projekt
+          Ditt projekt <span aria-hidden="true" className="ml-5">↗</span>
         </Link>
 
         <MobileNavigation items={navigation} />
