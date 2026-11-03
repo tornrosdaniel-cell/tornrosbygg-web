@@ -50,7 +50,7 @@ export default function AboutPage() {
           <div>
             <p className="body-lg">Våra projekt omfattar renovering av bostäder med kök och badrum, tillbyggnad med nya ytor, terrass och garage samt nybyggnation från grunden.</p>
             <p className="body-copy mt-6">Det är olika typer av uppdrag, men i alla behöver det som ska göras hänga ihop med platsen, underlagen och beställarens behov.</p>
-            <Link href="/projekt/" className="button button-secondary mt-8">Se våra projekt</Link>
+            <Link href="/projekt" className="button button-secondary mt-8">Se våra projekt</Link>
           </div>
         </div>
       </section>

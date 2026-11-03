@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://tornrosbygg.se/sitemap.xml",
+    sitemap: "https://www.tornrosbygg.se/sitemap.xml",
   };
 }

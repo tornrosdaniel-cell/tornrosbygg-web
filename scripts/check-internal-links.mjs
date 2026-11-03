@@ -3,6 +3,7 @@ import { join, relative, sep } from "node:path";
 
 const buildRoot = join(process.cwd(), ".next", "server", "app");
 const publicRoot = join(process.cwd(), "public");
+const productionOrigin = "https://www.tornrosbygg.se";
 
 if (!existsSync(join(buildRoot, "index.html"))) {
   console.error("Build saknas. Kör npm run build först.");
@@ -27,10 +28,15 @@ for (const page of pages) {
   for (const match of html.matchAll(/<a\b[^>]*\bhref="([^"]+)"/g)) {
     const href = match[1].replaceAll("&amp;", "&");
     if (/^(?:mailto:|tel:|javascript:|#)/i.test(href)) continue;
-    const url = new URL(href, `https://tornrosbygg.se/${source.replace(/(?:index)?\.html$/, "")}`);
-    if (url.origin !== "https://tornrosbygg.se") continue;
+    const url = new URL(href, `${productionOrigin}/${source.replace(/(?:index)?\.html$/, "")}`);
+    if (url.hostname !== "tornrosbygg.se" && url.hostname !== "www.tornrosbygg.se") continue;
     if (url.pathname.startsWith("/_next/")) continue;
     checked++;
+    if (url.origin !== productionOrigin || (url.pathname !== "/" && url.pathname.endsWith("/"))) {
+      const sources = missing.get(`Icke-slutlig URL: ${url.href}`) || new Set();
+      sources.add(source);
+      missing.set(`Icke-slutlig URL: ${url.href}`, sources);
+    }
     const pathname = decodeURIComponent(url.pathname).replace(/\/+$/, "") || "/";
     const target = pathname === "/" ? join(buildRoot, "index.html") : join(buildRoot, `${pathname.slice(1)}.html`);
     const asset = join(publicRoot, pathname.slice(1));
@@ -43,7 +49,7 @@ for (const page of pages) {
 }
 
 if (missing.size) {
-  console.error(`${missing.size} interna länkmål saknas efter byggning:`);
+  console.error(`${missing.size} interna länkmål saknas eller använder icke-slutliga URL:er:`);
   for (const [target, sources] of missing) {
     console.error(`- ${target} (från ${[...sources].join(", ")})`);
   }

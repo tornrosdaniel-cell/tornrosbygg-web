@@ -33,7 +33,7 @@ const renovationTypes = [
   {
     title: "Badrum som del av projektet",
     text: "Badrum kan ingå i en större renovering eller planeras som ett eget projekt.",
-    href: "/tjanster/badrumsrenovering/",
+    href: "/tjanster/badrumsrenovering",
   },
   {
     title: "Planlösning och färdigställande",
@@ -205,7 +205,7 @@ export default function RenovationPage() {
                 kök, tvättstuga och nya ytskikt.
               </p>
               <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-                <Link href="/projekt/renovering-namndemansgatan-solna/" className="button button-primary bg-white text-[var(--color-ink)] hover:bg-[var(--color-accent-soft)]">
+                <Link href="/projekt/renovering-namndemansgatan-solna" className="button button-primary bg-white text-[var(--color-ink)] hover:bg-[var(--color-accent-soft)]">
                   Läs om projektet
                 </Link>
                 <Link href="/projekt" className="button border-white/25 text-white hover:border-white">
@@ -281,7 +281,7 @@ export default function RenovationPage() {
               </details>
             ))}
           </div>
-          <p className="body-copy mt-8">Osäker på omfattningen? Läs guiden <Link href="/byggtips/totalrenovering-eller-delrenovering/" className="font-bold text-[var(--color-accent-dark)] underline underline-offset-4">Totalrenovering eller delrenovering?</Link></p>
+          <p className="body-copy mt-8">Osäker på omfattningen? Läs guiden <Link href="/byggtips/totalrenovering-eller-delrenovering" className="font-bold text-[var(--color-accent-dark)] underline underline-offset-4">Totalrenovering eller delrenovering?</Link></p>
         </div>
       </section>
 

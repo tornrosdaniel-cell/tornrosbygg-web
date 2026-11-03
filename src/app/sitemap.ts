@@ -28,5 +28,5 @@ const routes = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [...routes, ...getPublishedProjects().map(projectPath)].map((route) => ({ url: `https://tornrosbygg.se${route}` }));
+  return [...routes, ...getPublishedProjects().map(projectPath)].map((route) => ({ url: `https://www.tornrosbygg.se${route}` }));
 }
