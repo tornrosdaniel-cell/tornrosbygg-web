@@ -1,3 +1,5 @@
+import { ChdImageGallery } from "@/components/chd-image-gallery";
+import { chdImages } from "@/content/chd-images";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "Törnros Bygg hjälper privatpersoner och fastighetsägare med renoveringar i Solna och Stockholmsområdet – från enskilda delar till större totalrenoveringar.",
   alternates: {
-    canonical: "/tjanster/renovering/",
+    canonical: "/tjanster/renovering",
   },
 };
 
@@ -93,13 +95,12 @@ const faqs = [
 export default function RenovationPage() {
   return (
     <main>
-      <section className="container grid items-center gap-12 py-16 lg:grid-cols-2 lg:py-24">
+      <section className="container service-hero">
         <div>
           <p className="eyebrow mb-6">Renovering</p>
-          <h1 className="heading-xl">Renovering i Solna & Stockholm</h1>
+          <h1 className="heading-service">Renovering i Storstockholmsområdet</h1>
           <p className="body-lg mt-8">
-            Törnros Bygg utför renoveringsprojekt i Solna och
-            Stockholmsområdet, från enskilda rum och ytor till större
+            Törnros Bygg utför renoveringsprojekt i Storstockholmsområdet, från enskilda rum och ytor till större
             renoveringar av lägenheter och hus. Arbetet kan omfatta planering,
             samordning och genomförande utifrån projektets tekniska och
             praktiska förutsättningar.
@@ -117,18 +118,16 @@ export default function RenovationPage() {
         <figure className="surface overflow-hidden">
           <div className="relative aspect-[4/3]">
             <Image
-              src="/images/projects/namndemansgatan/renovering-vardagsrum-solna.jpeg"
-              alt="Färdigt vardagsrum efter renovering på Nämndemansgatan i Solna"
+              src={chdImages.custom.src}
+              alt={chdImages.custom.alt}
               fill
               priority
-              quality={85}
-              sizes="(min-width: 1024px) 50vw, 100vw"
+              quality={75}
+              sizes="(min-width: 1244px) 566px, (min-width: 1024px) calc((100vw - 112px) / 2), (min-width: 768px) calc(100vw - 64px), calc(100vw - 32px)"
               className="object-cover"
             />
           </div>
-          <figcaption className="border-t border-[var(--color-border)] bg-[var(--color-surface)] p-5 text-sm font-semibold text-[var(--color-muted)]">
-            Renovering · Nämndemansgatan, Solna
-          </figcaption>
+          <figcaption className="border-t border-[var(--color-border)] bg-[var(--color-surface)] p-5 text-sm font-semibold text-[var(--color-muted)]">Sammanhängande rum och genomtänkta detaljer</figcaption>
         </figure>
       </section>
 
@@ -188,17 +187,17 @@ export default function RenovationPage() {
           <article className="overflow-hidden rounded-[var(--radius-md)] border border-white/15 bg-white/5">
             <div className="relative aspect-[4/3]">
               <Image
-                src="/images/projects/namndemansgatan/renovering-vardagsrum-solna.jpeg"
-                alt="Renoverad interiör på Nämndemansgatan i Solna"
+                src="/images/projects/namndemansgatan/renovering-efter-solna.jpeg"
+                alt="Badrum under slutmontering i renoveringen"
                 fill
-                quality={80}
-                sizes="(min-width: 1024px) 50vw, 100vw"
+                quality={75}
+                sizes="(min-width: 1244px) 566px, (min-width: 1024px) calc((100vw - 112px) / 2), (min-width: 768px) calc(100vw - 64px), calc(100vw - 32px)"
                 className="object-cover"
               />
             </div>
             <div className="p-7 md:p-8">
               <p className="eyebrow mb-4 text-[var(--color-accent-soft)]">
-                Nämndemansgatan, Solna
+                Lägenhetsrenovering
               </p>
               <h3 className="heading-md text-white">Lägenhetsrenovering</h3>
               <p className="mt-5 leading-8 text-stone-300">
@@ -254,11 +253,10 @@ export default function RenovationPage() {
 
       <section className="border-y border-[var(--color-border)] bg-[var(--color-surface)] py-16 md:py-20">
         <div className="container max-w-4xl">
-          <p className="eyebrow mb-4">Solna & Stockholm</p>
-          <h2 className="heading-lg">Renovering med utgångspunkt i Solna</h2>
+          <p className="eyebrow mb-4">Storstockholmsområdet</p>
+          <h2 className="heading-lg">Renovering i Storstockholmsområdet</h2>
           <p className="body-lg mt-6">
-            Törnros Bygg utgår från Solna och genomför renoveringsprojekt i
-            Stockholmsområdet. Närhet till projekten underlättar löpande avstämningar,
+            Törnros Bygg genomför renoveringsprojekt i Storstockholmsområdet. Närhet till projekten underlättar löpande avstämningar,
             praktiska beslut och samordning under arbetets gång.
           </p>
         </div>
@@ -283,6 +281,7 @@ export default function RenovationPage() {
               </details>
             ))}
           </div>
+          <p className="body-copy mt-8">Osäker på omfattningen? Läs guiden <Link href="/byggtips/totalrenovering-eller-delrenovering/" className="font-bold text-[var(--color-accent-dark)] underline underline-offset-4">Totalrenovering eller delrenovering?</Link></p>
         </div>
       </section>
 
@@ -302,6 +301,7 @@ export default function RenovationPage() {
           </div>
         </div>
       </section>
+      <ChdImageGallery id="joinery-inspiration" title="Detaljer som hör till hemmet" intro="En välvd öppning och platsbyggd förvaring visar hur form och funktion kan mötas." items={[{ image: chdImages.joinery, title: "Platsbyggt med ett personligt uttryck" }]} />
     </main>
   );
 }

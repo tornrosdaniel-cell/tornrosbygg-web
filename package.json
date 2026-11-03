@@ -6,12 +6,16 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "check:links": "node scripts/check-internal-links.mjs",
+    "test:contact": "node --test scripts/contact-form.test.mjs",
+    "test:content": "node --test scripts/content-seo.test.mjs"
   },
   "dependencies": {
-    "next": "16.3.5",
+    "next": "16.4.3",
     "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "react-dom": "19.2.8",
+    "resend": "^6.32.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
@@ -19,8 +23,13 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "16.3.5",
+    "eslint-config-next": "16.4.3",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "wasmoon": "^1.16.0"
+  },
+  "overrides": {
+    "sharp": "0.35.5",
+    "source-map-js": "1.2.2"
   }
 }

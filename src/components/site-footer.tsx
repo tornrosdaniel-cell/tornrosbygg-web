@@ -8,6 +8,7 @@ const footerGroups = [
       { label: "Projekt", href: "/projekt" },
       { label: "Byggtips", href: "/byggtips" },
       { label: "Om oss", href: "/om-oss" },
+      { label: "Integritet", href: "/integritet" },
     ],
   },
   {
@@ -26,12 +27,12 @@ export function SiteFooter() {
     <footer className="border-t border-[var(--color-border)] bg-[var(--color-ink)] text-[var(--color-surface)]">
       <div className="container grid gap-12 py-14 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
-          <Link href="/" className="text-2xl font-bold">
+          <Link href="/" className="brand-mark text-2xl">
             Törnros Bygg
           </Link>
           <p className="mt-5 max-w-sm text-sm leading-7 text-stone-300">
-            Byggföretag i Solna och Stockholmsområdet för renovering,
-            tillbyggnad och entreprenad.
+            Custom Home Design & Build. Personliga hem och utvalda byggtjänster
+            i Storstockholmsområdet. Design. Teknik. Genomförande. Diskretion.
           </p>
         </div>
 

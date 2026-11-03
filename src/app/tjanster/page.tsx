@@ -4,9 +4,9 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Tjänster | Bygg & renovering i Stockholm | Törnros Bygg",
   description:
-    "Utforska Törnros Byggs tjänster inom renovering, badrumsrenovering, tillbyggnad, nybyggnation, Attefallshus, markarbeten och dränering i Solna och Stockholmsområdet.",
+    "Utforska Törnros Byggs tjänster inom renovering, badrumsrenovering, tillbyggnad, nybyggnation, Attefallshus, markarbeten och dränering samt pool, utemiljö och projektledning i Solna och Stockholmsområdet.",
   alternates: {
-    canonical: "/tjanster/",
+    canonical: "/tjanster",
   },
 };
 
@@ -46,19 +46,22 @@ const services = [
     href: "/tjanster/dranering/",
     text: "Dräneringsarbeten och åtgärder runt grund, servisledningar och utemiljöer.",
   },
+  {"title":"Poolbyggen och utemiljö","href":"/tjanster/markarbeten#pool-och-utemiljo","text":"Poolprojekt, trädäck och markytor som planeras tillsammans med tomtens förutsättningar."},
+  {"title":"Innergårdar och takarbeten","href":"/fastighetsagare#innergardar-och-tak","text":"Projekt för gårdar, gemensamma utomhusytor och tak i befintliga fastigheter."},
+  {"title":"Lekplatser och råvindsprojekt","href":"/fastighetsagare#lekplatser-och-ravindar","text":"Byggarbeten där användning, befintlig konstruktion och uppdragets gränser behöver klarläggas."},
+  {"title":"Projektledning och besiktning","href":"/fastighetsagare#projektledning-och-besiktning","text":"Fristående uppdrag med överenskommen omfattning för planering, samordning eller genomgång av byggarbeten."}
 ];
 
 export default function ServicesPage() {
   return (
     <main>
-      <section className="container py-16 md:py-24">
+      <section className="container page-intro">
         <div className="max-w-4xl">
           <p className="eyebrow mb-6">Tjänster</p>
-          <h1 className="heading-xl">Byggtjänster i Solna & Stockholm</h1>
+          <h1 className="heading-xl">Byggtjänster i Storstockholmsområdet</h1>
           <p className="body-lg mt-8 max-w-3xl">
             Törnros Bygg hjälper privatpersoner, bostadsrättsföreningar och
-            fastighetsägare med både mindre och större byggprojekt i Solna och
-            Stockholmsområdet. Uppdragen kan handla om en avgränsad del av en
+            fastighetsägare med både mindre och större byggprojekt i Storstockholmsområdet. Uppdragen kan handla om en avgränsad del av en
             bostad, en större renovering eller byggarbeten där flera moment
             behöver planeras och samordnas.
           </p>

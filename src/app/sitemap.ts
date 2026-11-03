@@ -1,24 +1,32 @@
 import type { MetadataRoute } from "next";
+import { getPublishedProjects, projectPath } from "@/content/projects";
+
+const routes = [
+  "/",
+  "/tjanster",
+  "/tjanster/renovering",
+  "/tjanster/badrumsrenovering",
+  "/tjanster/tillbyggnad",
+  "/tjanster/nybyggnation",
+  "/tjanster/attefallshus",
+  "/tjanster/markarbeten",
+  "/tjanster/dranering",
+  "/kontakt",
+  "/integritet",
+  "/om-oss",
+  "/fastighetsagare",
+  "/byggtips",
+  "/byggtips/planera-renovering",
+  "/byggtips/jamfora-bygg-offerter",
+  "/byggtips/forbereda-tillbyggnad",
+  "/byggtips/vad-kostar-badrumsrenovering",
+  "/byggtips/totalrenovering-eller-delrenovering",
+  "/byggtips/infor-dranering",
+  "/byggtips/andringar-tillaggsarbeten-renovering",
+  "/byggtips/dokumentera-byggprojekt",
+  "/projekt",
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    {
-      url: "https://tornrosbygg.se",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 1,
-    },
-    {
-      url: "https://tornrosbygg.se/tjanster",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: "https://tornrosbygg.se/tjanster/renovering",
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-  ];
+  return [...routes, ...getPublishedProjects().map(projectPath)].map((route) => ({ url: `https://tornrosbygg.se${route}` }));
 }
