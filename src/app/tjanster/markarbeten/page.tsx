@@ -68,7 +68,7 @@ export default function MarkarbetenPage() {
           <p className="body-lg mt-8">Ett genomtänkt markarbete börjar med platsen. Törnros Bygg hjälper till med markarbeten inför byggnation och runt befintliga hus, med hänsyn till åtkomst, markförhållanden och det som ska göras ovanför mark.</p>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
             <Link href="/kontakt" className="button button-primary">Berätta om ditt markprojekt</Link>
-            <Link href="/tjanster/dranering/" className="button button-secondary">Se även dränering</Link>
+            <Link href="/tjanster/dranering" className="button button-secondary">Se även dränering</Link>
           </div>
         </div>
         <aside className="flex min-h-72 lg:min-h-96 flex-col justify-between rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-ink)] p-8 text-[var(--color-surface)] md:p-12">

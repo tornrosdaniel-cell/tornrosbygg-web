@@ -5,7 +5,7 @@ import { SiteHeader } from "@/components/site-header";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://tornrosbygg.se"),
+  metadataBase: new URL("https://www.tornrosbygg.se"),
   title: "Törnros Bygg",
   description: "Byggföretag i Solna och Stockholm.",
 };

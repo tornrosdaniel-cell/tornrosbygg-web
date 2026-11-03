@@ -93,7 +93,7 @@ export default function ExtensionPage() {
             <Link href="/kontakt" className="button button-primary">
               Berätta om din tillbyggnad
             </Link>
-            <Link href="/tjanster/renovering/" className="button button-secondary">
+            <Link href="/tjanster/renovering" className="button button-secondary">
               Se även renovering
             </Link>
           </div>

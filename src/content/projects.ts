@@ -40,7 +40,7 @@ export const projects: Project[] = [
       "Nya ytskikt i två vardagsrum och tre sovrum"
     ],
     "service": {
-      "href": "/tjanster/renovering/",
+      "href": "/tjanster/renovering",
       "label": "Läs om renovering"
     },
     "hero": {
@@ -97,7 +97,7 @@ export const projects: Project[] = [
       "Garage under vardagsrummet"
     ],
     "service": {
-      "href": "/tjanster/tillbyggnad/",
+      "href": "/tjanster/tillbyggnad",
       "label": "Läs om tillbyggnad"
     },
     "hero": {
@@ -137,7 +137,7 @@ export const projects: Project[] = [
       "Pool och terrass i utemiljön"
     ],
     "service": {
-      "href": "/tjanster/nybyggnation/",
+      "href": "/tjanster/nybyggnation",
       "label": "Läs om nybyggnation"
     },
     "hero": {
@@ -201,7 +201,7 @@ export const projects: Project[] = [
       "Inbyggda nischer vid dusch och handfat"
     ],
     "service": {
-      "href": "/tjanster/badrumsrenovering/",
+      "href": "/tjanster/badrumsrenovering",
       "label": "Läs om badrumsrenovering"
     },
     "hero": {
@@ -257,7 +257,7 @@ export const projects: Project[] = [
       "Förråd och teknikrum för poolen"
     ],
     "service": {
-      "href": "/tjanster/attefallshus/",
+      "href": "/tjanster/attefallshus",
       "label": "Läs om attefallshus"
     },
     "hero": {
@@ -303,7 +303,7 @@ export const projects: Project[] = [
       "Planering för utekök"
     ],
     "service": {
-      "href": "/tjanster/markarbeten/",
+      "href": "/tjanster/markarbeten",
       "label": "Läs om markarbeten"
     },
     "hero": {
@@ -343,7 +343,7 @@ export const projects: Project[] = [
       "Marksten och återställning av gräsyta"
     ],
     "service": {
-      "href": "/tjanster/dranering/",
+      "href": "/tjanster/dranering",
       "label": "Läs om dränering"
     },
     "hero": {

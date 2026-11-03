@@ -107,7 +107,7 @@ export default function AttefallshusPage() {
             <Link href="/kontakt" className="button button-primary">
               Berätta om din byggnad
             </Link>
-            <Link href="/tjanster/nybyggnation/" className="button button-secondary">
+            <Link href="/tjanster/nybyggnation" className="button button-secondary">
               Se även nybyggnation
             </Link>
           </div>

@@ -13,6 +13,9 @@ import sharp from "sharp";
 
 const require = createRequire(import.meta.url);
 const root = resolve(import.meta.dirname, "..");
+// Independent expected public origin: changing application configuration must not
+// silently change what this regression considers the correct production host.
+const productionOrigin = "https://www.tornrosbygg.se";
 function load(file, imports = {}) {
   const source = readFileSync(join(root, file), "utf8");
   const compiled = ts.transpileModule(source, { compilerOptions: {
@@ -210,17 +213,24 @@ test("all sitemap URLs have matching non-redirecting canonicals and exactly one 
   assert.equal(response.status, 200);
   const xml = await response.text();
   const urls = [...xml.matchAll(/<loc>(.*?)<\/loc>/g)].map((m) => m[1]);
+  assert.equal(urls.length, 30);
   assert.equal(new Set(urls).size, urls.length);
-  for (const slug of expectedSlugs) assert.ok(urls.includes("https://tornrosbygg.se/projekt/" + slug));
+  for (const slug of expectedSlugs) assert.ok(urls.includes(productionOrigin + "/projekt/" + slug));
   const titles = new Set();
   for (const url of urls) {
+    assert.equal(new URL(url).origin, productionOrigin, url);
     const path = new URL(url).pathname;
     assert.ok(path === "/" || !path.endsWith("/"), url);
     const result = await fetch(base + path, { redirect: "manual" });
     assert.equal(result.status, 200, path);
     const html = await result.text();
     const canonical = html.match(/<link\b[^>]*rel="canonical"[^>]*href="([^"]+)"/)[1];
+    assert.equal(new URL(canonical).origin, productionOrigin, path);
     assert.equal(new URL(canonical).href, new URL(url).href, path);
+    // Exercise the canonical path on this working copy, not the live deployment.
+    const canonicalResult = await fetch(base + new URL(canonical).pathname, { redirect: "manual" });
+    assert.equal(canonicalResult.status, 200, canonical);
+    assert.equal(canonicalResult.headers.get("location"), null, canonical);
     assert.equal([...html.matchAll(/<h1\b/g)].length, 1, path);
     const title = html.match(/<title>(.*?)<\/title>/)[1];
     assert.ok(title && !titles.has(title), path);
@@ -244,7 +254,7 @@ test("every built content page is in sitemap and every project is listed", async
       if (entry.isDirectory()) walk(file);
       else if (entry.name.endsWith(".html") && !relative(buildRoot, file).split(sep).some((p) => p.startsWith("_"))) {
         const route = "/" + relative(buildRoot, file).split(sep).join("/").replace(/\.html$/, "").replace(/^index$/, "");
-        assert.ok(xml.includes("https://tornrosbygg.se" + route + "</loc>"), route);
+        assert.ok(xml.includes(productionOrigin + route + "</loc>"), route);
       }
     }
   }
@@ -253,6 +263,65 @@ test("every built content page is in sitemap and every project is listed", async
   for (const project of data.getPublishedProjects()) assert.ok(index.includes(`href="${data.projectPath(project)}"`));
   const home = await (await fetch(base)).text();
   for (const project of data.getFeaturedProjects()) assert.ok(home.includes(`href="${data.projectPath(project)}"`));
+});
+
+test("robots advertises only the final www sitemap and allows public crawling", async () => {
+  const response = await fetch(base + "/robots.txt", { redirect: "manual" });
+  assert.equal(response.status, 200);
+  const robots = await response.text();
+  assert.match(robots, /^User-Agent: \*$/m);
+  assert.match(robots, /^Allow: \/$/m);
+  assert.doesNotMatch(robots, /^Disallow:\s*\/\s*$/m);
+  const sitemapLines = [...robots.matchAll(/^Sitemap: (.+)$/gm)].map((m) => m[1].trim());
+  assert.deepEqual(sitemapLines, [productionOrigin + "/sitemap.xml"]);
+  const sitemap = await fetch(base + new URL(sitemapLines[0]).pathname, { redirect: "manual" });
+  assert.equal(sitemap.status, 200);
+  assert.equal(sitemap.headers.get("location"), null);
+});
+
+test("rendered metadata and internal links use final www URLs without slash redirects", async () => {
+  const xml = await (await fetch(base + "/sitemap.xml")).text();
+  const paths = [...xml.matchAll(/<loc>(.*?)<\/loc>/g)].map((m) => new URL(m[1]).pathname);
+  const targets = new Map();
+  let linkCount = 0, openGraphPages = 0;
+  const attributes = (tag) => Object.fromEntries([...tag.matchAll(/([\w:-]+)="([^"]*)"/g)]
+    .map((m) => [m[1].toLowerCase(), m[2].replaceAll("&amp;", "&")]));
+  for (const path of paths) {
+    const html = await (await fetch(base + path)).text();
+    const metadata = [...html.matchAll(/<(?:link|meta)\b[^>]*>/g)].map((m) => attributes(m[0]));
+    const canonical = metadata.filter((tag) => tag.rel === "canonical");
+    assert.equal(canonical.length, 1, path);
+    const ogUrl = metadata.find((tag) => tag.property === "og:url");
+    if (path.startsWith("/projekt/")) {
+      assert.equal(new URL(ogUrl?.content).href, new URL(path, productionOrigin).href, path);
+      assert.ok(metadata.some((tag) => tag.property === "og:image"), path);
+      openGraphPages++;
+    }
+    for (const tag of metadata) {
+      const value = tag.rel === "canonical" || tag.rel === "alternate" ? tag.href
+        : /^(?:og:(?:url|image(?::(?:url|secure_url))?)|twitter:(?:url|image(?::src)?))$/.test(tag.property ?? tag.name ?? "") ? tag.content : null;
+      if (!value) continue;
+      assert.equal(new URL(value).origin, productionOrigin, `${path}: ${value}`);
+      assert.doesNotMatch(value, /(?:localhost|127\.0\.0\.1|\.vercel\.app)/, path);
+    }
+    for (const match of html.matchAll(/<a\b[^>]*\bhref="([^"]+)"/g)) {
+      const href = match[1].replaceAll("&amp;", "&");
+      if (/^(?:mailto:|tel:|javascript:)/i.test(href)) continue;
+      const url = new URL(href, productionOrigin + path);
+      if (url.hostname !== "tornrosbygg.se" && url.hostname !== "www.tornrosbygg.se") continue;
+      linkCount++;
+      assert.equal(url.origin, productionOrigin, `${path}: ${href}`);
+      assert.ok(url.pathname === "/" || !url.pathname.endsWith("/"), `${path}: ${href}`);
+      targets.set(url.pathname + url.search, url);
+    }
+  }
+  for (const url of targets.values()) {
+    const response = await fetch(base + url.pathname + url.search, { redirect: "manual" });
+    assert.equal(response.status, 200, url.href);
+    assert.equal(response.headers.get("location"), null, url.href);
+  }
+  assert.equal(openGraphPages, expectedSlugs.length);
+  console.log(`${linkCount} internal links: final www host and direct HTTP 200; ${openGraphPages} project Open Graph URLs verified`);
 });
 
 test("CHD home keeps the brief, accessible contact fields and real project images", async () => {

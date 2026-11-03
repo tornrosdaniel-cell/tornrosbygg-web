@@ -13,49 +13,49 @@ const guides = [
     eyebrow: "Renovering",
     title: "Planera en renovering som håller ihop",
     text: "Vad behöver du bestämma, vilka underlag hjälper och hur får du grepp om arbetets omfattning?",
-    href: "/byggtips/planera-renovering/",
+    href: "/byggtips/planera-renovering",
   },
   {
     eyebrow: "Offert",
     title: "Jämför byggofferter med rätt frågor",
     text: "En offert är lättare att bedöma när innehåll, avgränsningar och öppna val går att jämföra.",
-    href: "/byggtips/jamfora-bygg-offerter/",
+    href: "/byggtips/jamfora-bygg-offerter",
   },
   {
     eyebrow: "Tillbyggnad",
     title: "Förbered en tillbyggnad vid ett befintligt hus",
     text: "Tänk igenom användning, anslutningen till huset, marken och vardagen under arbetet.",
-    href: "/byggtips/forbereda-tillbyggnad/",
+    href: "/byggtips/forbereda-tillbyggnad",
   },
   {
     eyebrow: "Badrum",
     title: "Vad kostar en badrumsrenovering?",
     text: "Förstå vilka arbeten och val som påverkar offerten för just ditt badrum.",
-    href: "/byggtips/vad-kostar-badrumsrenovering/",
+    href: "/byggtips/vad-kostar-badrumsrenovering",
   },
   {
     eyebrow: "Renovering",
     title: "Totalrenovering eller delrenovering?",
     text: "Se när ett avgränsat arbete räcker och när flera rum behöver planeras ihop.",
-    href: "/byggtips/totalrenovering-eller-delrenovering/",
+    href: "/byggtips/totalrenovering-eller-delrenovering",
   },
   {
     eyebrow: "Dränering",
     title: "Vad bör undersökas inför en dränering?",
     text: "Gå igenom fukttecken, huset, marken och vad som behöver återställas.",
-    href: "/byggtips/infor-dranering/",
+    href: "/byggtips/infor-dranering",
   },
   {
     eyebrow: "Renovering",
     title: "Ändringar och tillägg under en renovering",
     text: "Så stämmer du av nya önskemål och oväntade förutsättningar med tydliga beslut om omfattning, pris och tid.",
-    href: "/byggtips/andringar-tillaggsarbeten-renovering/",
+    href: "/byggtips/andringar-tillaggsarbeten-renovering",
   },
   {
     eyebrow: "Dokumentation",
     title: "Vad bör du dokumentera i ett byggprojekt?",
     text: "Samla rätt underlag före, under och efter arbetet, från offert och foton till ändringar och överlämning.",
-    href: "/byggtips/dokumentera-byggprojekt/",
+    href: "/byggtips/dokumentera-byggprojekt",
   },
 ];
 
@@ -86,7 +86,7 @@ export default function ByggtipsPage() {
           <div><p className="eyebrow mb-4">Projektets ordning</p><h2 className="heading-lg">Samla besluten på ett ställe</h2></div>
           <div>
             <p className="body-lg">Ritningar, offert, val och ändringar blir lättare att följa när de dokumenteras under projektets gång. Vi förespråkar tydlig kommunikation mellan beställare och utförare.</p>
-            <p className="body-copy mt-6">Vår <Link href="/byggtips/dokumentera-byggprojekt/" className="font-bold text-[var(--color-accent-dark)] underline underline-offset-4">guide till projektdokumentation</Link> visar vad som är bra att samla före, under och efter byggarbetet.</p>
+            <p className="body-copy mt-6">Vår <Link href="/byggtips/dokumentera-byggprojekt" className="font-bold text-[var(--color-accent-dark)] underline underline-offset-4">guide till projektdokumentation</Link> visar vad som är bra att samla före, under och efter byggarbetet.</p>
           </div>
         </div>
       </section>

@@ -13,37 +13,37 @@ export const metadata: Metadata = {
 const services = [
   {
     title: "Renovering",
-    href: "/tjanster/renovering/",
+    href: "/tjanster/renovering",
     text: "Total- och delrenoveringar av villor och lägenheter, från ytskikt till större omtag av flera rum.",
   },
   {
     title: "Badrumsrenovering",
-    href: "/tjanster/badrumsrenovering/",
+    href: "/tjanster/badrumsrenovering",
     text: "Badrumsprojekt där rivning, uppbyggnad, ytskikt och inredning behöver samordnas.",
   },
   {
     title: "Tillbyggnad",
-    href: "/tjanster/tillbyggnad/",
+    href: "/tjanster/tillbyggnad",
     text: "Tillbyggnader där markarbete, stomme, tak och invändigt färdigställande behöver hänga ihop.",
   },
   {
     title: "Nybyggnation",
-    href: "/tjanster/nybyggnation/",
+    href: "/tjanster/nybyggnation",
     text: "Byggprojekt från mark och grund till stomme, klimatskal och färdiga invändiga delar.",
   },
   {
     title: "Attefallshus",
-    href: "/tjanster/attefallshus/",
+    href: "/tjanster/attefallshus",
     text: "Komplementbyggnader för boende, arbete, gäster, förråd eller teknikrum.",
   },
   {
     title: "Markarbeten",
-    href: "/tjanster/markarbeten/",
+    href: "/tjanster/markarbeten",
     text: "Schakt, grundförberedelser, markytor och praktiska arbeten runt hus och fastigheter.",
   },
   {
     title: "Dränering",
-    href: "/tjanster/dranering/",
+    href: "/tjanster/dranering",
     text: "Dräneringsarbeten och åtgärder runt grund, servisledningar och utemiljöer.",
   },
   {"title":"Poolbyggen och utemiljö","href":"/tjanster/markarbeten#pool-och-utemiljo","text":"Poolprojekt, trädäck och markytor som planeras tillsammans med tomtens förutsättningar."},

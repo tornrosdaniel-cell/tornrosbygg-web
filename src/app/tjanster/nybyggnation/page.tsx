@@ -96,7 +96,7 @@ export default function NewConstructionPage() {
             <Link href="/kontakt" className="button button-primary">
               Berätta om ditt byggprojekt
             </Link>
-            <Link href="/tjanster/tillbyggnad/" className="button button-secondary">
+            <Link href="/tjanster/tillbyggnad" className="button button-secondary">
               Se även tillbyggnad
             </Link>
           </div>
